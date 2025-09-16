@@ -6,7 +6,7 @@ import { route, routeProps } from '../utils/router' // Mixins
 
 import { ChildrenMixin } from '../mixins/relation' // Components
 
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('descriptions-item')
 var createComponent = _createNamespace[0]

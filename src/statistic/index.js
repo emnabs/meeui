@@ -5,8 +5,7 @@ import numeral from 'numeral'
 import { createNamespace, addUnit, isDef } from '../utils'
 import { routeProps } from '../utils/router'
 import { statisticProps } from './shared'
-// Components
-import './style'
+// style moved to centralized theme entry
 import Icon from '../icon'
 
 var _createNamespace = createNamespace('statistic')

@@ -4,7 +4,7 @@ import { createNamespace } from '../utils'
 var _createNamespace = createNamespace('phone-number')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]
-import './style'
+// style moved to centralized theme entry
 
 function PhoneNumber(h, props, slots, ctx) {
   // var type = props.type

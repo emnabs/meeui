@@ -1,7 +1,7 @@
 // Utils
 import { createNamespace } from '../utils'
 import { BORDER_BOTTOM } from '../utils/constant' // Components
-import './style'
+// style moved to centralized theme entry
 import Icon from '../icon'
 
 var _createNamespace = createNamespace('nav-bar')

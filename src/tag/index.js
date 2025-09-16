@@ -4,7 +4,7 @@ import { createNamespace } from '../utils'
 import { inherit, emit } from '../utils/functional' // Components
 
 import Icon from '../icon' // Types
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('tag')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

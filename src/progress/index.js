@@ -1,6 +1,6 @@
 import { createNamespace, isObject, addUnit } from '../utils'
 import { raf, cancelRaf } from '../utils/dom/raf'
-import './style'
+// style moved to centralized theme entry
 import Icon from '../icon' // Types
 
 var _createNamespace = createNamespace('progress')

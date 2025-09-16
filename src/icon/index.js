@@ -4,7 +4,7 @@ import { createNamespace, addUnit } from '../utils'
 import { inherit } from '../utils/functional' // Components
 
 import Info from '../info' // Types
-import './style'
+// style moved to centralized theme entry
 import IconShapeData from './shapes/icons.json'
 
 var _createNamespace = createNamespace('icon')

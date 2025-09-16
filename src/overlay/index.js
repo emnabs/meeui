@@ -4,7 +4,7 @@ import _extends from '@babel/runtime/helpers/esm/extends'
 import { createNamespace, isDef, noop } from '../utils'
 import { inherit } from '../utils/functional'
 import { preventDefault } from '../utils/dom/event' // Types
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('overlay')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

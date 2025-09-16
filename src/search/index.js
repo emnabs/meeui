@@ -5,7 +5,7 @@ import _extends from '@babel/runtime/helpers/esm/extends'
 import { createNamespace } from '../utils'
 import { inherit, emit } from '../utils/functional'
 import { preventDefault } from '../utils/dom/event' // Components
-import './style'
+// style moved to centralized theme entry
 import Field from '../field' // Types
 
 var _createNamespace = createNamespace('search')

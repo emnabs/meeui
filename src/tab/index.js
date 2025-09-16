@@ -2,7 +2,7 @@ import _extends from '@babel/runtime/helpers/esm/extends'
 import { createNamespace } from '../utils'
 import { ChildrenMixin } from '../mixins/relation'
 import { routeProps } from '../utils/router'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('tab')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

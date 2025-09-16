@@ -5,7 +5,7 @@ import { preventDefault } from '../utils/dom/event' // Mixins
 
 import { TouchMixin } from '../mixins/touch'
 import { ClickOutsideMixin } from '../mixins/click-outside'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('swipe-cell')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]
@@ -127,7 +127,7 @@ export default createComponent({
         this.toggle(this.offset > 0 ? 'left' : 'right')
         this.dragging = false // compatible with desktop scenario
 
-        setTimeout(function() {
+        setTimeout(function () {
           _this.lockClick = false
         }, 0)
       }
@@ -180,7 +180,7 @@ export default createComponent({
     getClickHandler: function getClickHandler(position, stop) {
       var _this2 = this
 
-      return function(event) {
+      return function (event) {
         if (stop) {
           event.stopPropagation()
         }

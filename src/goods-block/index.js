@@ -5,7 +5,7 @@ import { emit, inherit } from '../utils/functional' // Components
 
 import Tag from '../tag'
 import Image from '../image' // Types
-import './style'
+// style moved to centralized theme entry
 
 import Icon from '../icon' // Types
 import Currency from '../currency' // Types

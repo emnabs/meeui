@@ -3,14 +3,14 @@ import { unitToPx } from '../utils/format/unit'
 import { createNamespace, isDef, isServer } from '../utils'
 import { getScrollTop, getElementTop, getScroller } from '../utils/dom/scroll'
 import { BindEventMixin } from '../mixins/bind-event'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('sticky')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]
 
 export default createComponent({
-  mixins: [BindEventMixin(function(bind, isBind) {
+  mixins: [BindEventMixin(function (bind, isBind) {
     if (!this.scroller) {
       this.scroller = getScroller(this.$el)
     }
@@ -74,7 +74,7 @@ export default createComponent({
 
     // compatibility: https://caniuse.com/#feat=intersectionobserver
     if (!isServer && window.IntersectionObserver) {
-      this.observer = new IntersectionObserver(function(entries) {
+      this.observer = new IntersectionObserver(function (entries) {
         // trigger scroll when visibility changed
         if (entries[0].intersectionRatio > 0) {
           _this.onScroll()

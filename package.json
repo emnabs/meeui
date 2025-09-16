@@ -1,6 +1,6 @@
 {
     "name": "@emhome/meeui",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "A Vue UI component library",
     "main": "dist/meeui.js",
     "module": "dist/meeui.js",
@@ -108,6 +108,7 @@
     "sideEffects": [
         "src/**/style/*",
         "src/style/**",
+        "theme/**",
         "*.css",
         "*.scss"
     ],

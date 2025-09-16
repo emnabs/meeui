@@ -3,7 +3,7 @@ import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 import { createNamespace, addUnit } from '../utils'
 import { inherit } from '../utils/functional'
 import { BORDER_TOP_BOTTOM } from '../utils/constant' // Types
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('cell-group')
 var createComponent = _createNamespace[0]

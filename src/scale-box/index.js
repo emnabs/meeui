@@ -1,5 +1,5 @@
 import { createNamespace, addUnit } from '../utils'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('scale-box')
 var createComponent = _createNamespace[0]

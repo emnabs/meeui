@@ -2,7 +2,7 @@ import { createNamespace, addUnit, isDef } from '../utils'
 import { THEME_COLORS } from '../utils/theme'
 import { formatNumber } from '../utils/format/number'
 import dayjs from 'dayjs'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('clock')
 var createComponent = _createNamespace[0]

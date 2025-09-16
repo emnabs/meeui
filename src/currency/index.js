@@ -5,7 +5,7 @@ import { THEME_COLORS } from '../utils/theme'
 
 
 // import { inherit } from '../utils/functional' // Types
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('currency')
 var createComponent = _createNamespace[0]

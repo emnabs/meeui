@@ -4,7 +4,7 @@ import { route, routeProps } from '../utils/router'
 import { ChildrenMixin } from '../mixins/relation'
 import Button from '../button'
 
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('goods-action-button')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

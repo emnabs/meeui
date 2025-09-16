@@ -13,7 +13,7 @@ import {
   isFunction,
   createNamespace
 } from '../utils' // Components
-import './style'
+// style moved to centralized theme entry
 import Icon from '../icon'
 import Cell from '../cell'
 import { cellProps } from '../cell/shared'

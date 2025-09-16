@@ -3,7 +3,7 @@ import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 import { createNamespace } from '../utils'
 import { inherit } from '../utils/functional' // Components
 import dayjs from 'dayjs'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('status-bar')
 var createComponent = _createNamespace[0]

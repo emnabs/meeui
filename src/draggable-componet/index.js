@@ -9,7 +9,7 @@ import TabbarItem from '../tabbar-item'
 import StatusBar from '../status-bar' // Types
 import Search from '../search' // Types
 
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('device')
 var createComponent = _createNamespace[0]

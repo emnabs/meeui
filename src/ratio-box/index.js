@@ -5,7 +5,7 @@ import { createNamespace, addUnit } from '../utils'
 import { emit, inherit } from '../utils/functional'
 import { routeProps, functionalRoute } from '../utils/router'
 import { ratioboxProps } from './shared' // Components
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('ratio-box')
 var createComponent = _createNamespace[0]

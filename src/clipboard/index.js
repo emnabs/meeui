@@ -1,6 +1,6 @@
 import { createNamespace } from '../utils'
 import Icon from '../icon' // Types
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('clipboard')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

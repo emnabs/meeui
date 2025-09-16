@@ -2,7 +2,7 @@ import { createNamespace, isDef } from '../utils'
 import { doubleRaf, raf } from '../utils/dom/raf'
 import { BindEventMixin } from '../mixins/bind-event'
 import Icon from '../icon'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('notice-bar')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

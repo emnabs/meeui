@@ -1,7 +1,7 @@
 import { createNamespace, inBrowser } from '../utils'
 import { raf, cancelRaf } from '../utils/dom/raf'
 import { isSameSecond, parseTimeData, parseFormat } from './utils'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('count-down')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

@@ -8,7 +8,7 @@ import { ChildrenMixin } from '../mixins/relation' // Components
 
 import Info from '../info'
 import Icon from '../icon'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('grid-item')
 var createComponent = _createNamespace[0]

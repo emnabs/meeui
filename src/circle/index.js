@@ -1,6 +1,6 @@
 import { createNamespace, isObject, addUnit } from '../utils'
 import { raf, cancelRaf } from '../utils/dom/raf'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('circle')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

@@ -2,7 +2,7 @@ import { createNamespace } from '../utils'
 import { BORDER_TOP_BOTTOM } from '../utils/constant'
 import { callInterceptor } from '../utils/interceptor'
 import { ParentMixin } from '../mixins/relation'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('tabbar')
 var createComponent = _createNamespace[0]

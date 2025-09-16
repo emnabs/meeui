@@ -1,6 +1,6 @@
 import { createNamespace } from '../utils'
 import { ParentMixin } from '../mixins/relation'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('goods-action')
 var createComponent = _createNamespace[0]

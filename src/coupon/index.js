@@ -1,6 +1,6 @@
 import { createNamespace } from '../utils'
 import { padZero } from '../utils/format/string'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('coupon')
 var createComponent = _createNamespace[0]

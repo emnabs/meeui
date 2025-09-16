@@ -4,7 +4,7 @@ import { createNamespace, isObject, isDef } from '../utils'
 import { route, routeProps } from '../utils/router' // Mixins
 
 import { ChildrenMixin } from '../mixins/relation' // Components
-import './style'
+// style moved to centralized theme entry
 import Icon from '../icon'
 import Info from '../info'
 

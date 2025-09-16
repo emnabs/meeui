@@ -7,7 +7,7 @@ import { routeProps, functionalRoute } from '../utils/router'
 import { cellProps } from './shared' // Components
 
 import Icon from '../icon' // Types
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('avatar')
 var createComponent = _createNamespace[0]

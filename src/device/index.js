@@ -9,17 +9,17 @@ import TabbarItem from '../tabbar-item'
 import StatusBar from '../status-bar' // Types
 import Search from '../search' // Types
 
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('device')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]
 
-function Device (h, props, slots, ctx) {
+function Device(h, props, slots, ctx) {
   var showHeader = slots.header || isDef(props.title) || isDef(props.icon) || isDef(props.subtitle)
   var platform = props.platform
 
-  function PageStatusBar () {
+  function PageStatusBar() {
     if (props.statusBar) {
       return h(StatusBar, {
         attrs: {
@@ -32,7 +32,7 @@ function Device (h, props, slots, ctx) {
     }
   }
 
-  function MpMenuButton () {
+  function MpMenuButton() {
     console.log('platform', platform)
     if (platform === 'mp') {
       return h(

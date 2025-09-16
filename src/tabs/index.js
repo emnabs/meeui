@@ -15,13 +15,13 @@ import { BindEventMixin } from '../mixins/bind-event' // Components
 import Title from './Title'
 import Sticky from '../sticky'
 import Content from './Content'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('tabs')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]
 
 export default createComponent({
-  mixins: [ParentMixin('vanTabs'), BindEventMixin(function(bind) {
+  mixins: [ParentMixin('vanTabs'), BindEventMixin(function (bind) {
     if (!this.scroller) {
       this.scroller = getScroller(this.$el)
     }
@@ -127,7 +127,7 @@ export default createComponent({
 
       this.setCurrentIndexByName(this.active)
       this.setLine()
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         _this.scrollIntoView(true)
       })
     },
@@ -162,7 +162,7 @@ export default createComponent({
     init: function init() {
       var _this2 = this
 
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         _this2.inited = true
         _this2.tabHeight = getVisibleHeight(_this2.$refs.wrap)
 
@@ -174,7 +174,7 @@ export default createComponent({
       var _this3 = this
 
       var shouldAnimate = this.inited
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         var titles = _this3.$refs.titles
 
         if (!titles || !titles[_this3.currentIndex] || _this3.type !== 'line' || isHidden(_this3.$el)) {
@@ -206,7 +206,7 @@ export default createComponent({
     },
     // correct the index of active tab
     setCurrentIndexByName: function setCurrentIndexByName(name) {
-      var matched = this.children.filter(function(tab) {
+      var matched = this.children.filter(function (tab) {
         return tab.computedName === name
       })
       var defaultIndex = (this.children[0] || {}).index || 0
@@ -289,7 +289,7 @@ export default createComponent({
     scrollTo: function scrollTo(name) {
       var _this5 = this
 
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         _this5.setCurrentIndexByName(name)
 
         _this5.scrollToCurrentContent(true)
@@ -309,7 +309,7 @@ export default createComponent({
         if (el) {
           var to = getElementTop(el, this.scroller) - this.scrollOffset
           this.lockScroll = true
-          scrollTopTo(this.scroller, to, immediate ? 0 : +this.duration, function() {
+          scrollTopTo(this.scroller, to, immediate ? 0 : +this.duration, function () {
             _this6.lockScroll = false
           })
         }
@@ -343,7 +343,7 @@ export default createComponent({
     var type = this.type
     var animated = this.animated
     var scrollable = this.scrollable
-    var Nav = this.children.map(function(item, index) {
+    var Nav = this.children.map(function (item, index) {
       var _item$badge
 
       return h(Title, {

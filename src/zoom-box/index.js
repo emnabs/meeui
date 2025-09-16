@@ -3,7 +3,7 @@ import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 import { createNamespace, isDef, addUnit } from '../utils'
 import { inherit } from '../utils/functional' // Components
 
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('zoom-box')
 var createComponent = _createNamespace[0]

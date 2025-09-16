@@ -2,7 +2,7 @@ import _mergeJSXProps2 from '@vue/babel-helper-vue-jsx-merge-props'
 import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 import { createNamespace, isDef, addUnit, inBrowser } from '../utils'
 import Icon from '../icon'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('image')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

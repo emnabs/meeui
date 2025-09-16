@@ -2,7 +2,7 @@
 import { createNamespace, isDef, addUnit } from '../utils'
 
 import Icon from '../icon' // Types
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('alert')
 var createComponent = _createNamespace[0]

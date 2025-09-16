@@ -3,7 +3,7 @@ import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 import { THEME_COLORS } from '../utils/theme'
 import { createNamespace, isDef, addUnit, getContrastYIQ } from '../utils'
 import { inherit } from '../utils/functional' // Types
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('color-block')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

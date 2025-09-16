@@ -5,7 +5,7 @@ import { createNamespace, isDef } from '../utils'
 import { emit, inherit } from '../utils/functional'
 import { routeProps, functionalRoute } from '../utils/router'
 import Icon from '../icon' // Types
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('card')
 var createComponent = _createNamespace[0]

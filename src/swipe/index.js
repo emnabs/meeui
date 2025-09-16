@@ -9,7 +9,7 @@ import { addUnit } from '../utils/format/unit'
 import { TouchMixin } from '../mixins/touch'
 import { ParentMixin } from '../mixins/relation'
 import { BindEventMixin } from '../mixins/bind-event'
-import './style'
+// style moved to centralized theme entry
 var _createNamespace = createNamespace('swipe')
 var createComponent = _createNamespace[0]
 var bem = _createNamespace[1]

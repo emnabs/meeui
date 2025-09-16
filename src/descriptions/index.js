@@ -1,7 +1,7 @@
 import { createNamespace, addUnit } from '../utils'
 import { BORDER_RIGHT, BORDER_TOP_BOTTOM } from '../utils/constant'
 import { ParentMixin } from '../mixins/relation'
-import './style'
+// style moved to centralized theme entry
 
 var _createNamespace = createNamespace('descriptions')
 var createComponent = _createNamespace[0]
