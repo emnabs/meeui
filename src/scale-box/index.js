@@ -39,7 +39,9 @@ export default createComponent({
     }
   },
   beforeDestroy: function beforeDestroy() {
-    this.resizeObserver?.disconnect()
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect()
+    }
     window.removeEventListener('resize', this.updateSize)
     clearTimeout(this.updateTimer)
   },
