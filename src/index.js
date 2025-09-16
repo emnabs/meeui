@@ -166,7 +166,7 @@ function install(Vue) {
     Tag,
     ZoomBox
   ]
-  
+
   // 注册组件
   components.forEach(function (item) {
     if (item && item.install) {
@@ -184,7 +184,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 // 导出组件
 
-export {  
+export {
   install,
   version,
   Alert,

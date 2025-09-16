@@ -12,12 +12,13 @@ module.exports = {
     ]
   ],
   plugins: [
+    '@babel/plugin-transform-object-rest-spread',
     [
       'component',
       {
-        libraryName: 'meeui',
+        libraryName: '@emhome/meeui',
         styleLibraryName: 'theme'
       }
     ]
   ]
-};
+}

@@ -1,5 +1,5 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -77,7 +77,8 @@ module.exports = {
     minimize: false,
     minimizer: [
       new TerserPlugin({
-        include: /\.min\.js$/,
+        test: /\.min\.js$/,
+        sourceMap: false
       })
     ]
   },
