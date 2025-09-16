@@ -1,8 +1,8 @@
 // import _mergeJSXProps from '@vue/babel-helper-vue-jsx-merge-props'
 // Utils
-import { createNamespace, isDef } from '../utils'
+import { createNamespace, isDef, convertCurrency } from '../utils'
 import { THEME_COLORS } from '../utils/theme'
-import { convertCurrency } from '@/utils'
+
 
 // import { inherit } from '../utils/functional' // Types
 import './style'

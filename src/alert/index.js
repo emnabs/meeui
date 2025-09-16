@@ -58,7 +58,7 @@ export default createComponent({
   methods: {
     onClickIcon: function onClickIcon(event) {
       if (this.mode === 'closeable') {
-        this.show = false
+        this.visible = false
         this.$emit('close', event)
       }
     }

@@ -1,0 +1,428 @@
+//
+// Global variables for Bootstrap customization.
+// To override any Bootstrap variable safely you can use _variables.demo.scss
+//
+
+//
+// Color system
+//
+
+// Black color
+$black: #000000 !default;
+
+// White color
+$white: #ffffff !default;
+
+// Gray colors
+$gray-100: #f3f6f9 !default;
+$gray-200: #ebedf3 !default;
+$gray-300: #e4e6ef !default;
+$gray-400: #d1d3e0 !default;
+$gray-500: #b5b5c3 !default;
+$gray-600: #7e8299 !default;
+$gray-700: #5e6278 !default;
+$gray-800: #3f4254 !default;
+$gray-900: #181c32 !default;
+
+// Dark colors
+$dark: $gray-900 !default;
+$dark-75: $gray-800 !default; // Custom variable
+$dark-65: $gray-700 !default; // Custom variable
+$dark-50: $gray-600 !default; // Custom variable
+$dark-25: $gray-400 !default; // Custom variable
+
+// Theme colors
+$blue: #3466ff !default;
+$indigo: #6610f2 !default;
+$purple: #9565f7 !default;
+$pink: #e83e8c !default;
+$red: #f64e60 !default;
+$orange: #ffa800 !default;
+$yellow: #ffc107 !default;
+$green: #65d62c !default;
+$teal: #1bc5bd !default;
+$cyan: #17a2b8 !default;
+
+// Text muted
+$text-muted: $gray-500 !default; // Custom variable
+
+// Gray colors list
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+) !default; // Custom variable
+
+// Bootstrap standard & extended colors
+
+// Dark colors
+$dark: $dark !default; // Bootstrap variable
+$dark-hover: darken($dark, 3%) !default; // Custom variable
+$dark-light: $gray-400 !default; // Custom variable
+$dark-inverse: $white !default; // Custom variable
+
+// Primary colors
+$primary: $blue !default; // Bootstrap variable
+$primary-hover: darken($primary, 5%) !default; // Custom variable
+$primary-light: #e1f0ff !default; // Custom variable
+$primary-inverse: $white !default; // Custom variable
+
+// Secondary colors
+$secondary: $gray-300 !default; // Bootstrap variable
+$secondary-hover: darken($gray-300, 4%) !default; // Custom variable
+$secondary-light: $gray-200 !default; // Custom variable
+$secondary-inverse: $dark-75 !default; // Custom variable
+
+// Success colors
+$success: $green !default; // Bootstrap variable
+$success-hover: darken($success, 5%) !default; // Custom variable
+$success-light: lighten($success, 45%) !default; // Custom variable
+$success-inverse: $white !default; // Custom variable
+
+// Inco colors
+$info: $indigo !default; // Bootstrap variable
+$info-hover: darken($info, 8%) !default; // Custom variable
+$info-light: lighten($info, 45%) !default; // Custom variable#C9F7F5
+$info-inverse: $white !default; // Custom variable
+
+// Warning colors
+$warning: $orange !default; // Bootstrap variable
+$warning-hover: darken($warning, 5%) !default; // Custom variable
+$warning-light: #fff4de !default; // Custom variable
+$warning-inverse: $white !default; // Custom variable
+
+// Danger colors
+$danger: $red !default; // Bootstrap variable
+$danger-hover: darken($danger, 10%) !default; // Custom variable
+$danger-light: #ffe2e5 !default; // Custom variable
+$danger-inverse: $white !default; // Custom variable
+
+// Light colors
+$light: $gray-100 !default; // Bootstrap variable
+$light-hover: $gray-300 !default; // Custom variable
+$light-light: $gray-100 !default; // Custom variable
+$light-inverse: $gray-600 !default; // Custom variable
+
+// White colors
+$white: $white !default; // Bootstrap variable
+$white-hover: $gray-100 !default; // Custom variable
+$white-light: $white !default; // Custom variable
+$white-inverse: $dark-75 !default; // Custom variable
+
+// Black colors
+$black: $black !default; // Bootstrap variable
+$black-hover: lighten($black, 10%) !default; // Custom variable
+$black-light: $gray-400 !default; // Custom variable
+$black-inverse: $white !default; // Custom variable
+
+// Bootstrap theme colors
+$theme-colors: (
+  'white': $white,
+  // custom color type
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'black': $black,
+  'dark': $dark,
+) !default;
+
+// Extended hover colors for Bootstrap theme colors
+$theme-hover-colors: (
+  'white': $white-hover,
+  // custom color type
+  'primary': $primary-hover,
+  'secondary': $secondary-hover,
+  'success': $success-hover,
+  'info': $info-hover,
+  'warning': $warning-hover,
+  'danger': $danger-hover,
+  'light': $light-hover,
+  'black': $black-hover,
+  'dark': $dark-hover,
+) !default; // Custom variable
+
+// Extended inverse colors for Bootstrap theme colors
+$theme-inverse-colors: (
+  'white': $white-inverse,
+  'primary': $primary-inverse,
+  'secondary': $secondary-inverse,
+  'success': $success-inverse,
+  'info': $info-inverse,
+  'warning': $warning-inverse,
+  'danger': $danger-inverse,
+  'light': $light-inverse,
+  'black': $black-inverse,
+  'dark': $dark-inverse,
+) !default; // Custom variable
+
+// Extended outline colors for Bootstrap theme colors
+$theme-outline-inverse-colors: (
+  'white': $white,
+  'primary': $primary,
+  'secondary': $dark-75,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $dark-75,
+  'black': $dark-75,
+  'dark': $dark,
+) !default; // Custom variable
+
+// Extended light colors for Bootstrap theme colors
+$theme-light-colors: (
+  'white': $white-light,
+  'primary': $primary-light,
+  'secondary': $secondary-light,
+  'success': $success-light,
+  'info': $info-light,
+  'warning': $warning-light,
+  'danger': $danger-light,
+  'light': $light-light,
+  'black': $black-light,
+  'dark': $dark-light,
+) !default; // Custom variable
+
+// Extended shadow colors for Bootstrap theme colors
+$theme-shadow-colors: (
+  'white': $dark,
+  'primary': $primary,
+  'secondary': $dark,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $dark,
+  'black': $black,
+  'dark': $dark,
+) !default; // Custom variable
+
+// Extended theme text colors
+$theme-text-colors: (
+  'white': $white,
+  'primary': $primary,
+  'secondary': $dark,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'black': $black,
+  'dark': $dark,
+  'dark-75': $dark-75,
+  'dark-65': $dark-65,
+  'dark-50': $dark-50,
+  'dark-25': $dark-25,
+  'muted': $text-muted,
+) !default; // Custom variable
+
+// Extended light colors for Bootstrap theme colors
+$theme-soft-colors: (
+  'white': $white-light,
+  'primary': $primary-light,
+  'secondary': $secondary-light,
+  'success': $success-light,
+  'info': $info-light,
+  'warning': $warning-light,
+  'danger': $danger-light,
+  'light': $light-light,
+  'black': $black-light,
+  'dark': $dark-light,
+) !default; // Custom variable
+
+$enable-gradients: true !default;
+
+// Extended custom spacing for Bootstrap
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacer-count: 40;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$line-height-xl: 2 !default;
+$line-height-lg: 1.75 !default;
+$line-height-sm: 1.25 !default;
+
+$component-light-style-opacity: 0.1 !default; // Custom variable
+$component-active-color: $white !default;
+$component-active-bg: $primary !default;
+
+// Box shadow
+$box-shadow-xs: 0 0.25rem 0.5rem 0 rgba($black, 0.0475);
+$box-shadow-sm: 0 0.1rem 1rem 0.25rem rgba($black, 0.0475) !default;
+$box-shadow: 0 0.375rem 1.5rem 0.5rem rgba($black, 0.0475) !default;
+$box-shadow-lg: 0 0.8rem 2.5rem 0.8rem rgba($black, 0.0475) !default;
+
+// Border Radiues
+$border-radius-sm: 0.28rem !default;
+$border-radius: 0.42rem !default;
+$border-radius-lg: 0.85rem !default;
+$border-radius-xl: 1.25rem !default; // Custom variable
+
+// Border settings
+$border-color: $gray-200 !default;
+$border-width: 1px !default;
+
+// Hover background color
+$hover-bg: $gray-100 !default; // Custom variable
+
+// Activebackground color
+$active-bg: darken($gray-100, 1%) !default; // Custom variable
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// Body
+// Settings for the `<body>` element.
+$body-bg: $white !default;
+$body-color: $dark-75 !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+// label
+$label-margin-bottom: 0;
+// Font family
+$font-path: 'https://oss.bangzheng607.com/assets/fonts' !default;
+$font-family-base: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+  '微软雅黑', Arial, sans-serif !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `13px`
+$font-size-lg: $font-size-base * 1.08 !default; // 14.04px
+$font-size-sm: $font-size-base * 0.925 !default; // 12.025px
+$font-size-xs: $font-size-base * 0.8 !default; // 10.4px
+
+$h1-font-size: $font-size-base * 3 !default; // 26px
+$h2-font-size: $font-size-base * 1.75 !default; // 22.75px
+$h3-font-size: $font-size-base * 1.5 !default; // 19.5px
+$h4-font-size: $font-size-base * 1.35 !default; // 17.55px
+$h5-font-size: $font-size-base * 1.25 !default; // 16.25px
+$h6-font-size: $font-size-base * 1.175 !default; // 15.275px
+
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$display1-size: 5.5rem !default; // 71.5px
+$display2-size: 4.5rem !default; // 58.5px
+$display3-size: 3.5rem !default; // 45.5px
+$display4-size: 2.5rem !default; // 32.5px
+$display5-size: 2rem !default; // 29.5px
+
+// Font Sizes
+$font-sizes: (
+  font-size-h1: $h1-font-size,
+  font-size-h2: $h2-font-size,
+  font-size-h3: $h3-font-size,
+  font-size-h4: $h4-font-size,
+  font-size-h5: $h5-font-size,
+  font-size-h6: $h6-font-size,
+  display1: $display1-size,
+  display2: $display2-size,
+  display3: $display3-size,
+  display4: $display4-size,
+  display5: $display5-size,
+) !default;
+
+$display1-weight: 300 !default;
+$display2-weight: 300 !default;
+$display3-weight: 300 !default;
+$display4-weight: 300 !default;
+$display-line-height: $headings-line-height !default;
+
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
+$small-font-size: 80% !default;
+
+// Font Weight
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 600 !default;
+$font-weight-boldest: 700 !default;
+
+$line-height-base: 1.5 !default;
+
+// Transition
+$transition: all 0.15s ease !default; // Custom variable
+$transition-link: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease,
+  box-shadow 0.15s ease !default; // Custom variable
+$transition-input: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease,
+  box-shadow 0.15s ease !default; // Custom variable
+
+// Table
+$table-bg: transparent !default;
+$table-accent-bg: $gray-200 !default;
+$table-hover-bg: $gray-300 !default;
+$table-active-bg: $table-hover-bg !default;
+
+$table-border-color: $gray-200 !default;
+$table-head-bg: $gray-100 !default;
+$table-head-color: $dark-75 !default;
+$table-head-font-size: 1rem !default; // Custom variable
+$table-head-font-weight: 600 !default; // Custom variable
+
+$table-dark-color: $white !default;
+$table-dark-bg: $dark !default;
+$table-dark-accent-bg: rgba($white, 0.05) !default;
+$table-dark-hover-color: $table-dark-color !default;
+$table-dark-hover-bg: rgba($white, 0.075) !default;
+$table-dark-border-color: lighten($table-dark-bg, 7.5%) !default;
+
+$table-head-bg: $gray-100 !default; // Custom variable
+$table-compact-head-font-size: 0.9rem !default; // Custom variable
+$table-compact-head-color: $text-muted !default; // Custom variable
+$table-compact-head-text-transform: uppercase !default; // Custom variable
+$table-compact-head-font-weight: 600 !default; // Custom variable
+$table-compact-head-font-weight: 600 !default; // Custom variable
+$table-compact-head-letter-spacing: 0.1rem !default; // Custom variable
+
+// Card
+$card-box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05) !default; // card custom shadow
+$card-active-box-shadow: 0px 0px 30px 0px rgba($primary, 0.125) !default;
+$card-border-color: $gray-200 !default;
+$card-cap-bg: $white !default;
+$card-spacer-y: 1rem !default;
+$card-spacer-x: 1.25rem !default;
+$card-border-radius: $border-radius !default;
+
+$card-header-spacer-y: 0.5rem !default; // Custom variable
+$card-header-height: 70px !default; // Custom variable
+$card-sticky-header-bg: $white !default; // Custom variable
+$card-sticky-header-height: 70px !default; // Custom variable
+$card-sticky-zindex: 101 !default; // Custom variable
+$card-sticky-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1) !default; // Custom variable
+
+// List group
+$list-group-border-color: $gray-200 !default;
+$list-group-hover-bg: $gray-200 !default;
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+$alert-box-shadow: $card-box-shadow !default; // Custom variable
