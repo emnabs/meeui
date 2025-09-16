@@ -3,50 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MeeUI 演示</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-  <link rel="stylesheet" href="../dist/meeui.css">
+  <title>MeeUI 组件库演示 - Element UI 风格</title>
+  <!-- 在生产环境中使用以下方式 -->
+    <!-- 全局引入样式 -->
+    <!-- <link rel="stylesheet" href="../theme/index.scss"> -->
+    <!-- 或使用打包后的样式 -->
+    <link rel="stylesheet" href="../dist/meeui.css">
 </head>
 <body>
   <div id="app">
     <h1>MeeUI 组件库演示</h1>
     
+    <!-- 全局引入示例 -->
     <div class="demo-section">
-      <h2>基础组件</h2>
-      
-      <div class="demo-item">
-        <h3>按钮 Button</h3>
-        <m-button type="primary">主要按钮</m-button>
-        <m-button>默认按钮</m-button>
-        <m-button type="danger">危险按钮</m-button>
-      </div>
-      
-      <div class="demo-item">
-        <h3>图标 Icon</h3>
-        <m-icon name="success" color="#07c160" size="24"></m-icon>
-        <m-icon name="warning" color="#ff976a" size="24"></m-icon>
-        <m-icon name="error" color="#ee0a24" size="24"></m-icon>
-      </div>
-      
-      <div class="demo-item">
-        <h3>单元格 Cell</h3>
-        <m-cell-group>
-          <m-cell title="单元格" value="内容"></m-cell>
-          <m-cell title="带图标" value="内容" icon="location"></m-cell>
-          <m-cell title="带箭头" is-link value="内容"></m-cell>
-        </m-cell-group>
-      </div>
+      <h2>全局引入组件</h2>
+      <p>通过 Vue.use(MeeUI) 全局注册的组件</p>
+      <m-button type="primary">主要按钮</m-button>
+      <m-icon name="success"></m-icon>
+      <m-cell-group>
+        <m-cell title="标题文字" value="内容"></m-cell>
+      </m-cell-group>
+    </div>
+    
+    <!-- 按需引入示例 -->
+    <div class="demo-section">
+      <h2>按需引入组件（Element UI 风格）</h2>
+      <p>可通过 babel-plugin-component 实现按需引入</p>
+      <pre>
+// babel.config.js 配置
+plugins: [
+  [
+    'component',
+    {
+      libraryName: 'meeui',
+      styleLibraryName: 'theme'
+    }
+  ]
+]
+      </pre>
+      <pre>
+// 组件使用示例
+import Vue from 'vue';
+import { Button, Cell } from 'meeui';
+
+Vue.use(Button);
+Vue.use(Cell);
+      </pre>
     </div>
   </div>
   
+  <!-- 引入 Vue 和 MeeUI -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="../dist/meeui.js"></script>
+  
   <script>
     new Vue({
       el: '#app',
       mounted() {
-        console.log('MeeUI 组件库已加载');
+        console.log('MeeUI 组件库加载成功 - Element UI 风格');
       }
     })
   </script>
+  
+  <style>
+    .demo-section {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+  </style>
 </body>
 </html>

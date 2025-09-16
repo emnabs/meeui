@@ -11,5 +11,13 @@ module.exports = {
       }
     ]
   ],
-  plugins: []
+  plugins: [
+    [
+      'component',
+      {
+        libraryName: 'meeui',
+        styleLibraryName: 'theme'
+      }
+    ]
+  ]
 };

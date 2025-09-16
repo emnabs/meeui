@@ -24,30 +24,65 @@ npm i meeui -S
 yarn add meeui
 ```
 
+### 按需引入
+
+为了减小打包体积，可以使用按需引入的方式，首先需要安装 babel-plugin-component：
+
+```bash
+npm install babel-plugin-component -D
+```
+
+然后在 babel.config.js 中添加配置：
+
+```javascript
+plugins: [
+  [
+    'component',
+    {
+      libraryName: 'meeui',
+      styleLibraryName: 'theme'
+    }
+  ]
+]
+```
+
 ## 快速上手
 
-### 引入组件
+### 全局引入
 
-#### 1. 全局引入
+在 main.js 中引入：
 
 ```javascript
 import Vue from 'vue';
 import MeeUI from 'meeui';
-import 'meeui/dist/meeui.css';
+import 'meeui/theme/index'; // 支持不带扩展名的方式
 
 Vue.use(MeeUI);
 ```
 
-#### 2. 按需引入
+也可以使用带扩展名的方式：
+
+```javascript
+import Vue from 'vue';
+import MeeUI from 'meeui';
+import 'meeui/theme/index.scss';
+
+Vue.use(MeeUI);
+```
+
+### 按需引入
+
+在需要使用的组件中引入：
 
 ```javascript
 import Vue from 'vue';
 import { Button, Cell } from 'meeui';
-import 'meeui/dist/meeui.css';
 
 Vue.use(Button);
 Vue.use(Cell);
 ```
+
+> 注意：使用 babel-plugin-component 后，样式会自动引入，无需手动引入样式文件。
 
 ## 开发说明
 
