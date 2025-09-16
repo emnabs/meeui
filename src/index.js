@@ -4,6 +4,7 @@
 // import AddressList from './address-list'
 // import Area from './area'
 import Alert from './alert'
+import './style/index.scss'
 import Avatar from './avatar'
 // import Badge from './badge'
 import ByteSize from './byte-size'

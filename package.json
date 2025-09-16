@@ -1,6 +1,6 @@
 {
     "name": "@emhome/meeui",
-    "version": "1.0.3",
+    "version": "1.0.6",
     "description": "A Vue UI component library",
     "main": "dist/meeui.js",
     "module": "dist/meeui.js",
@@ -9,6 +9,7 @@
     "style": "dist/meeui.css",
     "files": [
         "dist",
+        "src",
         "theme",
         "vetur"
     ],
@@ -22,7 +23,8 @@
     "scripts": {
         "dev": "webpack-dev-server --config build/webpack.config.dev.js",
         "build": "webpack --config build/webpack.config.prod.js",
-        "lint": "eslint src --ext .js,.vue"
+        "lint": "eslint src --ext .js,.vue",
+        "prepublishOnly": "npm run build"
     },
     "husky": {
         "hooks": {
@@ -104,8 +106,8 @@
         "webpack-node-externals": "^1.7.2"
     },
     "sideEffects": [
-        "es/**/style/*",
-        "lib/**/style/*",
+        "src/**/style/*",
+        "src/style/**",
         "*.css",
         "*.scss"
     ],
