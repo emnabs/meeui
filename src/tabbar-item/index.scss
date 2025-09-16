@@ -1,0 +1,48 @@
+@import '../style/var';
+
+.mee-tabbar-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: $--tabbar-item-text-color;
+  font-size: $--tabbar-item-font-size;
+  line-height: $--tabbar-item-line-height;
+  cursor: pointer;
+  gap: $--tabbar-item-margin-bottom;
+
+  &__icon {
+    position: relative;
+    font-size: $--tabbar-item-icon-size;
+    .mee-icon {
+      display: block;
+      font-size: inherit;
+    }
+
+    img {
+      display: block;
+      height: $--tabbar-item-icon-size;
+    }
+    &--top {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        border-radius: $--tabbar-item-icon-size * 2;
+        padding: $--tabbar-item-icon-size / 3;
+      }
+    }
+  }
+
+  &--active {
+    color: $--tabbar-item-active-color;
+    background-color: $--tabbar-item-active-background-color;
+  }
+
+  .mee-info {
+    margin-top: $--padding-base;
+  }
+}

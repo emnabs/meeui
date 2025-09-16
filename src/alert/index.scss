@@ -1,0 +1,215 @@
+@import '../style/var';
+@import '../style/functions';
+@import '../style/mixins';
+
+/*----------------------------------------*/
+/*  Alert Element Styles
+/*----------------------------------------*/
+
+//
+// Alert
+//
+
+// Default
+.mee-alert {
+  $last-rule: &;
+  position: relative;
+  padding: $--alert-padding-y $--alert-padding-x;
+  margin-bottom: $--alert-margin-bottom;
+  border: 0 solid transparent;
+  @include border-radius($--alert-border-radius);
+
+  display: flex;
+  align-items: stretch;
+
+  // Headings for larger alerts
+  &__content {
+    flex: 1;
+  }
+
+  // Headings for larger alerts
+  &__title {
+    // Specified to prevent conflicts of changing $headings-color
+    font-weight: bold;
+    font-size: $--font-size-lg;
+    //color: inherit;
+  }
+
+  // Headings for larger alerts
+  &__text {
+    // Specified to prevent conflicts of changing $headings-color
+    font-size: $--font-size-sm;
+    // align-self: center;
+    // flex-grow: 1;
+    opacity: 0.8;
+  }
+
+  &__title + &__text {
+    margin-top: 0.85rem;
+  }
+
+  &__text + * {
+    margin-top: 1.35rem;
+  }
+
+  // Provide class for links that match alerts
+  &__link {
+    font-weight: $--alert-link-font-weight;
+  }
+
+  &__icon {
+    display: flex;
+    padding: 0 1.25rem 0 0;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    i {
+      font-size: 2rem;
+    }
+
+    &--top {
+      align-items: flex-start;
+      align-content: stretch;
+    }
+  }
+
+  &__close {
+    font-size: 1rem;
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+    transition: $--transition-link;
+    &:focus,
+    &:hover {
+      transition: $--transition-link;
+    }
+  }
+
+  // Theme colors
+  @each $name, $color in $theme-colors {
+    // Solid style
+    &--#{$name} {
+      background-color: $color;
+      border-color: $color;
+      color: theme-inverse-color($name);
+
+      #{$last-rule}__icon {
+        i {
+          opacity: 0.8;
+        }
+      }
+
+      #{$last-rule}__title,
+      #{$last-rule}__text {
+        color: theme-inverse-color($name);
+      }
+
+      #{$last-rule}__close {
+        opacity: 0.8;
+        color: $--white;
+        &:focus,
+        &:hover {
+          opacity: 1;
+          color: theme-inverse-color($name);
+        }
+      }
+    }
+
+    // Light style
+    &--light-#{$name} {
+      background-color: theme-light-color($name);
+      border-color: transparent;
+
+      &.mee-alert--notice {
+        border: 0;
+        border-left: 3px solid $color;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      #{$last-rule}__title,
+      #{$last-rule}__text {
+        color: $color;
+      }
+
+      #{$last-rule}__close {
+        color: $--gray-5;
+        &:focus,
+        &:hover {
+          color: theme-hover-color($name);
+        }
+      }
+    }
+
+    // Outline style
+    &--outline-#{$name} {
+      background-color: transparent;
+      border-color: #f3f6f9;
+
+      #{$last-rule}__icon {
+        color: $color;
+      }
+
+      #{$last-rule}__text {
+        color: $--gray-55;
+      }
+
+      #{$last-rule}__close {
+        color: $--gray-5;
+        &:focus,
+        &:hover {
+          color: theme-hover-color($name);
+        }
+      }
+    }
+  }
+
+  // Elevate style
+  &--border {
+    border-width: 1px;
+  }
+
+  // Elevate style
+  &--shadow {
+    box-shadow: $--alert-box-shadow;
+  }
+
+  &--small {
+    padding: 0.8rem 1rem;
+    #{$last-rule}__icon {
+      padding-right: 0.85rem;
+      i {
+        font-size: 1.75rem;
+      }
+    }
+    #{$last-rule}__title {
+      font-size: $--font-size-sm;
+    }
+    // Headings for larger alerts
+    #{$last-rule}__text {
+      transform: scale(0.85);
+      transform-origin: left center;
+    }
+    #{$last-rule}__title + #{$last-rule}__text {
+      margin-top: 0.35rem;
+    }
+    #{$last-rule}__text + * {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &--large {
+    padding: 2rem 2.5rem;
+    #{$last-rule}__icon {
+      padding-right: 2rem;
+      i {
+        font-size: 2.4rem;
+      }
+    }
+    #{$last-rule}__title {
+      font-size: 1.55rem;
+    }
+  }
+}

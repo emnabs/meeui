@@ -1,0 +1,76 @@
+@import '../style/var';
+
+// 2: Reboot
+@import '../style/bootstrap/index';
+
+/*----------------------------------------*/
+/*  Card Element Styles
+/*----------------------------------------*/
+
+//
+// Card
+//
+.mee-device {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: $card-height;
+  word-wrap: break-word;
+  background-color: $card-bg;
+  background-clip: border-box;
+  height: 100%;
+  @include border-radius($card-border-radius);
+  overflow: hidden;
+  // Due to specificity of the above selector (`.card > .list-group`), we must
+  // use a child selector here to prevent double borders.
+
+  &__header {
+    height: 44px;
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .mee-sticky {
+      display: none;
+      &--fixed {
+        display: block;
+        top: 42px;
+        left: 13px;
+        width: 325px;
+      }
+    }
+  }
+
+  &__mp-button {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    z-index: 1;
+    height: 28px;
+    width: 76px;
+    background: #fff;
+    color: black;
+    border-radius: 34px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .mee-icon {
+      font-size: 18px;
+    }
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: '';
+      width: 1px;
+      background: #ccc;
+      height: 70%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}

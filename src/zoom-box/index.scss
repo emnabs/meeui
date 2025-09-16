@@ -1,0 +1,49 @@
+@import '../style/var';
+@import '../style/mixins/hairline';
+
+.mee-zoom-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $--cell-background-color;
+  &:root {
+    --scalebox-ratio: 100%;
+  }
+  &::before {
+    padding-top: var(--scalebox-ratio, 100%);
+    content: '';
+    display: block;
+  }
+
+  &__inner {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+
+  &--clickable {
+    cursor: pointer;
+    &:active {
+      background-color: $--cell-active-color;
+    }
+  }
+
+  &--center &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--border &__body {
+    border: 1px solid $--border-color;
+  }
+}

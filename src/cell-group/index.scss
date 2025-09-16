@@ -1,0 +1,38 @@
+@import '../style/var';
+
+.mee-cell-group {
+  &:root {
+    --grid-template-columns: 4;
+    --gap: 15px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background-color: $--cell-group-background-color;
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &__title {
+    padding: $--cell-group-title-padding;
+    color: $--cell-group-title-color;
+    font-size: $--cell-group-title-font-size;
+    line-height: $--cell-group-title-line-height;
+  }
+
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-template-columns), 1fr);
+  }
+
+  &--grid &__title {
+    grid-column-start: 1;
+    grid-column-end: calc(var(--grid-template-columns) + 1);
+  }
+
+  &--small &__title {
+    font-size: $--cell-group-title-font-size * 0.8;
+  }
+}

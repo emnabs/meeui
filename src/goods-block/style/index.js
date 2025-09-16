@@ -1,0 +1,6 @@
+import '../../style/base.scss'
+import '../../info/index.scss'
+import '../../icon/index.scss'
+import '../../image/index.scss'
+import '../../tag/index.scss'
+import '../index.scss'

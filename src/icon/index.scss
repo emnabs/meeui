@@ -1,0 +1,17 @@
+@import '../style/var';
+@import 'local';
+
+.mee-icon {
+  display: inline-flex;
+  &__image {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      color: $value;
+    }
+  }
+}

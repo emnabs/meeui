@@ -1,0 +1,12 @@
+@import '../style/var';
+
+.mee-phone-number {
+  line-height: 1;
+  &__char {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  &__char + &__char {
+    margin-left: 4px;
+  }
+}

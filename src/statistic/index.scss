@@ -1,0 +1,65 @@
+@import '../style/var';
+@import '../style/mixins/triangle';
+
+.mee-statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-wrap: nowrap;
+  justify-content: space-between;
+  &--reverse {
+    flex-direction: column-reverse;
+  }
+  &--center {
+    align-items: center;
+  }
+  &--vertical {
+    justify-content: center;
+  }
+  &__label {
+    color: rgba(0, 0, 0, 0.4);
+    text-wrap: nowrap;
+  }
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2rem;
+    line-height: 1;
+    font-family: 'DINT', 'Dosis', 'Helvetica Neue', -apple-system, BlinkMacSystemFont,
+      Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB,
+      Microsoft Yahei, sans-serif;
+    gap: 2px;
+    small {
+      font-size: 50%;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    font-size: $--statistic-float-font-size;
+    color: rgba(0, 0, 0, 0.4);
+    text-wrap: nowrap;
+  }
+  &__arrow {
+    align-self: center;
+    &--up {
+      @include triangle(
+        $--statistic-float-font-size/1.5,
+        $--statistic-float-font-size/2,
+        #e32727,
+        'up'
+      );
+    }
+    &--down {
+      @include triangle(
+        $--statistic-float-font-size/1.5,
+        $--statistic-float-font-size/2,
+        #00b80c,
+        'down'
+      );
+    }
+  }
+}

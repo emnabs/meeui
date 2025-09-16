@@ -1,0 +1,57 @@
+@import '../style/var';
+
+.mee-descriptions {
+  --grid-gap: 0;
+  --grid-columns: 30;
+  --grid-column-end-span: 1;
+
+  &__header {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__body {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
+    dl {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      dt {
+        color: #999;
+      }
+      dd {
+        flex: 1;
+        margin: 0;
+      }
+      dd > * + * {
+        margin-left: 8px;
+      }
+
+      &:last-child {
+        grid-column-end: span var(--grid-column-end-span, 1);
+      }
+    }
+    &--border {
+      dt,
+      dd {
+        padding: 6px 10px;
+      }
+    }
+  }
+  &--mini {
+    font-size: 10.5px;
+  }
+  &--small {
+    font-size: 12px;
+  }
+  &--large {
+    font-size: 16px;
+  }
+
+  & + & {
+    margin-top: 30px;
+  }
+}

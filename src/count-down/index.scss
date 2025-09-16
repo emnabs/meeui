@@ -1,0 +1,22 @@
+@import '../style/var';
+
+.mee-count-down {
+  line-height: $--count-down-line-height;
+  &__card {
+    &-block {
+      display: inline-block;
+      width: 22px;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      background-color: var(--count-down-card-color, #000);
+      border-radius: 3px;
+    }
+    &-split {
+      display: inline-block;
+      margin: 0 4px;
+      font-weight: bold;
+      color: var(--count-down-card-color, #000);
+    }
+  }
+}

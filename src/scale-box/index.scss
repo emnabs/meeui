@@ -1,0 +1,12 @@
+@import '../style/var';
+@import '../style/mixins/hairline';
+
+.mee-scale-box {
+  position: relative;
+  overflow: hidden;
+  &__inner {
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}

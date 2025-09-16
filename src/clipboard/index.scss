@@ -1,0 +1,20 @@
+@import '../style/var';
+
+.mee-clipboard {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  &__icon {
+    cursor: pointer;
+    transform: scale(0.75);
+    // transform-origin: top right;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__content--code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  }
+}

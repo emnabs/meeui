@@ -1,0 +1,192 @@
+@import '../style/var';
+@import '../style/mixins/hairline';
+
+.mee-clock {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+  &__panel {
+    position: relative;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(
+      170deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.4) 20%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    border: 6px solid #ccc;
+    &::after {
+      padding-top: 100%;
+      content: '';
+      display: block;
+      border-radius: 50%;
+      box-shadow: inset rgba(255, 255, 255, 0.2) 0.2em 0.2em 1em;
+    }
+  }
+  &__extras {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  &__brand {
+    font-size: 14px;
+  }
+
+  &__datetime {
+    font-size: 12px;
+  }
+
+  &__plate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+  }
+  &__anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+    }
+    &--second {
+      transform: rotate(180deg);
+      &::after {
+        width: 2px;
+        height: 150px;
+        background: #fa9f22;
+        transform: translate(-50%, -100%) translateY(24px);
+      }
+    }
+    &--minute {
+      transform: rotate(54deg);
+      &::before {
+        width: 4px;
+        height: 100px;
+        border-radius: 10px;
+        background: white;
+        transform: translate(-50%, -100%) translateY(10px);
+      }
+    }
+    &--hour {
+      transform: rotate(304.5deg);
+      &::before {
+        width: 6px;
+        height: 70px;
+        border-radius: 10px;
+        background: white;
+        transform: translate(-50%, -100%) translateY(10px);
+      }
+    }
+  }
+  &__pad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 296px;
+    transform: translate(-50%, -50%);
+    &--base {
+      background: white;
+      width: 12px;
+      height: 12px;
+    }
+    &--top {
+      border: 2px solid #fa9f22;
+      background: black;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &__dial {
+    &--minute {
+      background: white;
+      width: 1px;
+      height: 5px;
+      transform: translate(-50%, -100%) translateY(-131px);
+      opacity: 0.34;
+    }
+    &--hour {
+      background: white;
+      width: 2px;
+      height: 9px;
+      transform: translate(-50%, -100%) translateY(-131px);
+      opacity: 0.5;
+    }
+  }
+  &__hour {
+    position: absolute;
+    font-size: 20px;
+    font-family: DIN, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    transform: translate(-50%, -50%);
+    &-10 {
+      padding-left: 0.4ex;
+    }
+    &-11 {
+      padding-left: 0.25ex;
+    }
+  }
+
+  &--white {
+    background: transparent;
+  }
+  &--white &__panel {
+    background: radial-gradient
+      (
+        ellipse at center,
+        rgba(246, 248, 249, 1) 0%,
+        rgba(229, 235, 238, 1) 65%,
+        rgba(205, 212, 217, 1) 66%,
+        rgba(245, 247, 249, 1) 100%
+      );
+    border-color: #333;
+    &::after {
+      box-shadow: inset rgba(0, 0, 0, 0.2) 0.2em 0.2em 1em;
+      background: linear-gradient(to top, #fff, #ddd);
+    }
+  }
+  &--white &__hour {
+    color: #333;
+  }
+  &--white &__dial--minute,
+  &--white &__dial--hour {
+    background: #000;
+  }
+  &--white &__anchor--minute {
+    &::before {
+      background: #000;
+    }
+    &::after {
+      background: #000;
+    }
+  }
+  &--white &__anchor--hour {
+    box-shadow: 1px -3px 8px 3px #aaa;
+    &::before {
+      background: #000;
+    }
+    &::after {
+      background: #000;
+    }
+  }
+}

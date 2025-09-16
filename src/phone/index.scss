@@ -1,0 +1,276 @@
+@import '../style/var';
+
+// 2: Reboot
+@import '../style/bootstrap/index';
+
+/*----------------------------------------*/
+/*  Card Element Styles
+/*----------------------------------------*/
+
+//
+// Card
+//
+.mee-phone {
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  background: #68686b;
+  border-radius: 30px;
+  padding: 2px;
+  transform: skew(0deg, 0deg);
+  -webkit-transform: skew(0deg, 0deg);
+  &--iphonex {
+    height: auto;
+    &::after {
+      padding-top: 202.538787%;
+      content: '';
+      display: block;
+    }
+  }
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__shape {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #68686b;
+    border-radius: 30px;
+    padding: 2px;
+    transform: skew(0deg, 0deg);
+    -webkit-transform: skew(0deg, 0deg);
+  }
+  &-shadow:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+    border-radius: 18px;
+    filter: blur(8px);
+  }
+  &__bright {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    padding: 1px;
+  }
+  &__border {
+    width: 100%;
+    height: 100%;
+    background: #0b0d0c;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: inset 14px 0px 10px -15px #fff, inset -14px 0px 10px -15px #fff;
+  }
+  &__screen {
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__datetime {
+    width: 25%;
+    left: 0px;
+    position: absolute;
+    top: 6px;
+    z-index: 111;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    font-family: Arial;
+  }
+  &__statebar {
+    width: 25%;
+    right: 1.5px;
+    position: absolute;
+    top: 4px;
+    z-index: 111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__fringe {
+    width: 40%;
+    height: 20px;
+    background: #0b0d0c;
+    margin: 0 auto;
+    border-radius: 0px 0px 14px 14px;
+    position: absolute;
+    left: 30%;
+    top: 12.5px;
+    z-index: 99;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: #0b0d0c;
+      left: -5px;
+      top: 0px;
+      z-index: 9;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: #0b0d0c;
+      right: -5px;
+      top: 0px;
+      z-index: 9;
+    }
+    &-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 100%;
+        left: -10px;
+        top: 1px;
+        z-index: 10;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 100%;
+        right: -10px;
+        top: 1px;
+        z-index: 10;
+      }
+    }
+  }
+  &__mobile-receiver {
+    width: 25%;
+    height: 3px;
+    border-radius: 5em;
+    background: #2d2d2d;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+  &__mobile-front-camera {
+    width: 5px;
+    height: 5px;
+    border-radius: 5em;
+    background: #212554;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+  &__mobile-frame-home {
+    width: 32%;
+    height: 0.5%;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    margin-left: -16%;
+    background: #0b0d0c;
+  }
+
+  &__button {
+    width: 1.5px;
+    background: #121212;
+    position: absolute;
+    &:after {
+      content: '';
+      display: block;
+      width: 0.5px;
+      background: rgba(255, 255, 255, 0.6);
+      position: absolute;
+    }
+    &--left {
+      border-radius: 5px 0px 0px 5px;
+    }
+    &--right {
+      border-radius: 0px 5px 5px 0px;
+    }
+    &--mute {
+      height: 3.75%;
+      top: 13.5%;
+      left: -1.5px;
+      &:after {
+        width: 0.8px;
+        height: 90%;
+        background: rgba(255, 255, 255, 0.8);
+        left: 0px;
+        bottom: 5%;
+      }
+    }
+
+    &--volume-up {
+      height: 7%;
+      top: 20.75%;
+      left: -1.5px;
+      &:after {
+        height: 90%;
+        right: 0px;
+        bottom: 5%;
+      }
+    }
+
+    &--volume-down {
+      height: 7%;
+      top: 30%;
+      left: -1.5px;
+      &:after {
+        height: 90%;
+        right: 0px;
+        bottom: 5%;
+      }
+    }
+
+    &--lock {
+      height: 11.5%;
+      top: 23%;
+      right: -1.5px;
+      &:after {
+        height: 90%;
+        left: 0px;
+        bottom: 5%;
+      }
+    }
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    // border-radius: 70px 70px 70px 70px;
+    // padding: 11.5px 12.5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    // padding: 1px 0;
+    overflow: hidden;
+    // border-radius: 0 0 20px 20px;
+  }
+}

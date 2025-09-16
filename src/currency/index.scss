@@ -1,0 +1,79 @@
+@import '../style/var';
+
+.mee-currency {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+  font-weight: normal;
+  &--capital {
+    flex-direction: column;
+    gap: 0.4em;
+  }
+  &__number {
+    display: inline-flex;
+    align-items: baseline;
+  }
+  &__captial-text {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 80%;
+    opacity: 0.8;
+  }
+  &__symbol {
+    padding-right: 2px;
+  }
+  &__value {
+    font-weight: normal;
+  }
+  &__precision {
+    &::before {
+      content: '.';
+    }
+  }
+  &__text,
+  &__after-text {
+    margin-left: 2px;
+  }
+  &__before-text {
+    margin-right: 2px;
+  }
+
+  &:not(&--uniform) &__precision,
+  &:not(&--uniform) &__text,
+  &:not(&--uniform) &__after-text,
+  &:not(&--uniform) &__before-text,
+  &:not(&--uniform) &__symbol {
+    font-size: 80%;
+  }
+
+  @each $size, $font-size in $base-font-sizes {
+    &--#{$size} {
+      font-size: $font-size;
+    }
+    &--#{$size} &__value {
+      font-size: $font-size * 1.25;
+    }
+  }
+
+  &:not(&--uniform) &__symbol {
+    transform: scale(0.9);
+    transform-origin: center bottom;
+    &::before {
+      line-height: 1;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      color: darken($value, 15%);
+    }
+  }
+
+  &--negative {
+    color: $--red;
+  }
+
+  &--positive {
+    color: $--green;
+  }
+}

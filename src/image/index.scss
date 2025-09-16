@@ -1,0 +1,81 @@
+@import '../style/var';
+
+.mee-image {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  &:root {
+    --scalebox-ratio: 100%;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--scale {
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+    &::after {
+      padding-top: var(--scalebox-ratio, 100%);
+      content: '';
+      display: inline-block;
+    }
+  }
+
+  &--round {
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      border-radius: inherit;
+    }
+  }
+
+  &__img,
+  &__error,
+  &__loading {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: contain;
+  }
+
+  &__error,
+  &__loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #c5cddd;
+    font-size: $--image-placeholder-font-size;
+    background-color: $--image-placeholder-background-color;
+    > * {
+      transform: scale(0.8);
+      text-align: center;
+    }
+  }
+
+  &__loading-icon {
+    color: $--image-loading-icon-color;
+    font-size: $--image-loading-icon-size;
+  }
+
+  &__error-icon {
+    color: $--image-error-icon-color;
+    font-size: $--image-error-icon-size;
+  }
+
+  &--autowidth {
+    width: auto;
+  }
+}

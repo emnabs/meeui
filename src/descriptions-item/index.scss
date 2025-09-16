@@ -1,0 +1,40 @@
+@import '../style/var';
+
+.mee-descriptions-item {
+  $last-rule: &;
+  position: relative;
+  box-sizing: border-box;
+
+  &--top {
+    flex-direction: column;
+  }
+
+  &--top &__label {
+    flex: none;
+    width: 100% !important;
+    &::after {
+      border-right-width: 0;
+      border-bottom-width: 2px;
+    }
+  }
+
+  &--right &__label {
+    text-align: right;
+  }
+  &--right &__content {
+    text-align: left;
+  }
+  &--middle {
+    align-items: center;
+  }
+
+  // &:last-child {
+  //   grid-column-end: span auto-fill;
+  //   // &::after {
+  //   //   border-right-width: 2px;
+  //   // }
+  // }
+  // &:nth-child(){
+
+  // }
+}

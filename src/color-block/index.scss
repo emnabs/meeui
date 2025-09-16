@@ -1,0 +1,61 @@
+@import '../style/var';
+@import '../style/mixins/hairline';
+
+.mee-color-block {
+  position: relative;
+  width: $--color-block-size;
+  height: $--color-block-size;
+  box-sizing: border-box;
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    background-color: inherit;
+  }
+  &--square {
+    height: auto !important;
+    &::before {
+      padding-top: 100%;
+    }
+  }
+  &--large {
+    width: $--color-block-size * 2;
+    height: $--color-block-size * 2;
+  }
+  &--small {
+    width: $--color-block-size * 0.8;
+    height: $--color-block-size * 0.8;
+  }
+  &--surround {
+    &::after {
+      @include hairline($--cell-border-color);
+      border-width: $--border-width-base;
+      border-radius: inherit;
+    }
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    text-transform: uppercase;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: invert(0.8) grayscale(0.8);
+    -webkit-filter: invert(0.8) grayscale(0.8);
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      background-color: $value;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import '../style/var';
+
+// 2: Reboot
+@import '../style/bootstrap/index';
+
+/*----------------------------------------*/
+/*  Card Element Styles
+/*----------------------------------------*/
+
+//
+// Card
+//
+.mee-device {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: $card-height;
+  word-wrap: break-word;
+  background-color: $card-bg;
+  background-clip: border-box;
+  height: 100%;
+  @include border-radius($card-border-radius);
+
+  // Due to specificity of the above selector (`.card > .list-group`), we must
+  // use a child selector here to prevent double borders.
+
+  &__header {
+    height: 44px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__footer {
+  }
+}
