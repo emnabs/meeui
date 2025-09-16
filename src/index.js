@@ -1,3 +1,4 @@
+// 组件导入
 // import ActionSheet from './action-sheet'
 // import AddressEdit from './address-edit'
 // import AddressList from './address-list'
@@ -6,7 +7,7 @@ import Alert from './alert'
 import Avatar from './avatar'
 // import Badge from './badge'
 import ByteSize from './byte-size'
-// import Button from './button'
+import Button from './button'
 // import Calendar from './calendar'
 import Card from './card'
 // import Cascader from './cascader'
@@ -19,7 +20,7 @@ import Cell from './cell'
 import CellGroup from './cell-group'
 // import Checkbox from './checkbox'
 // import CheckboxGroup from './checkbox-group'
-// import Circle from './circle'
+import Circle from './circle'
 import Clock from './clock'
 // import Col from './col'
 // import Collapse from './collapse'
@@ -57,8 +58,7 @@ import Lazyload from './lazyload'
 // import List from './list'
 // import Loading from './loading'
 // import Locale from './locale'
-
-// import NavBar from './nav-bar'
+import NavBar from './nav-bar'
 import NoticeBar from './notice-bar'
 // import Notify from './notify'
 // import NumberKeyboard from './number-keyboard'
@@ -109,57 +109,30 @@ import Tag from './tag'
 // import Uploader from './uploader'
 import ZoomBox from './zoom-box'
 
-import HandleButton from '@/components/HandleButton'
-import HandleButtonGroup from '@/components/HandleButtonGroup'
+// 版本号
+var version = '1.0.0'
 
-var version = '2.12.14'
-
+// 安装函数
 function install(Vue) {
   var components = [
-    HandleButton,
-    HandleButtonGroup,
-    // ActionSheet,
-    // AddressEdit,
-    // AddressList,
-    // Area,
     Alert,
     Avatar,
     ByteSize,
-    // Badge,
-    // Button,
-    // Calendar,
+    Button,
     Card,
     Clipboard,
+    Currency,
     Device,
     Descriptions,
     DescriptionsItem,
-    // Cascader,
-    Currency,
     Cell,
     CellGroup,
+    Circle,
     Clock,
-    // Checkbox,
-    // CheckboxGroup,
-    // Circle,
-    // Col,
-    // Collapse,
-    // CollapseItem,
     ColorBlock,
-    // ContactCard,
-    // ContactEdit,
-    // ContactList,
     CountDown,
     Coupon,
-    // CouponCell,
-    // CouponList,
-    // DatetimePicker,
-    // Dialog,
-    // Divider,
-    // DropdownItem,
-    // DropdownMenu,
-    // Empty,
     Field,
-    // Form,
     GoodsCard,
     GoodsBlock,
     GoodsAction,
@@ -169,190 +142,105 @@ function install(Vue) {
     GridItem,
     Icon,
     Image,
-    // ImagePreview,
-    // IndexAnchor,
-    // IndexBar,
-    // Info,
-    // List,
-    // Loading,
-    // Locale,
-    // NavBar,
+    Lazyload,
+    NavBar,
     NoticeBar,
-    // Notify,
-    // NumberKeyboard,
     Overlay,
-    // Pagination,
-    // Panel,
-    // PasswordInput,
-    // Picker,
     PlaceHolder,
     Phone,
     PhoneNumber,
-    // Popover,
-    // Popup,
     Progress,
-    // PullRefresh,
-    // Radio,
-    // RadioGroup,
-    // Rate,
     RatioBox,
     RemoteScript,
-    // Row,
     ScaleBox,
     Search,
-    // ShareSheet,
-    // Sidebar,
-    // SidebarItem,
-    // Skeleton,
-    // Sku,
-    // Slider,
     Statistic,
-    // Step,
-    // Stepper,
-    // Steps,
     Sticky,
-    // SubmitBar,
     Swipe,
     SwipeCell,
     SwipeItem,
-    // Switch
-    // SwitchCell,
     Tab,
     Tabbar,
     TabbarItem,
     Tabs,
     Tag,
-    // Toast,
-    // TreeSelect,
-    // Uploader,
     ZoomBox
   ]
+  
+  // 注册组件
   components.forEach(function (item) {
-    if (item.install) {
+    if (item && item.install) {
       Vue.use(item)
-    } else if (item.name) {
+    } else if (item && item.name) {
       Vue.component(item.name, item)
     }
   })
 }
 
+// 自动安装（浏览器环境）
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export {
+// 导出组件
+
+export {  
   install,
   version,
-  // ActionSheet,
-  // AddressEdit,
-  // AddressList,
-  // Area,
   Alert,
   Avatar,
   ByteSize,
-  // Badge,
-  // Button,
-  // Calendar,
+  Button,
   Card,
   Clipboard,
   Currency,
   Device,
   Descriptions,
   DescriptionsItem,
-  // Cascader,
   Cell,
   CellGroup,
+  Circle,
   Clock,
-  // Checkbox,
-  // CheckboxGroup,
-  // Circle,
-  // Col,
-  // Collapse,
-  // CollapseItem,
   ColorBlock,
-  // ContactCard,
-  // ContactEdit,
-  // ContactList,
   CountDown,
   Coupon,
-  // CouponCell,
-  // CouponList,
-  // DatetimePicker,
-  // Dialog,
-  // Divider,
-  // DropdownItem,
-  // DropdownMenu,
-  // Empty,
   Field,
-  // Form,
   GoodsCard,
   GoodsBlock,
-  // GoodsAction,
-  // GoodsActionButton,
-  // GoodsActionIcon,
+  GoodsAction,
+  GoodsActionButton,
+  GoodsActionIcon,
   Grid,
   GridItem,
   Icon,
   Image,
-  // ImagePreview,
-  // IndexAnchor,
-  // IndexBar,
-  // Info,
   Lazyload,
-  // List,
-  // Loading,
-  // Locale,
-  // NavBar,
+  NavBar,
   NoticeBar,
-  // Notify,
-  // NumberKeyboard,
   Overlay,
-  // Pagination,
-  // Panel,
-  // PasswordInput,
-  // Picker,
   PlaceHolder,
   Phone,
   PhoneNumber,
-  // Popover,
-  // Popup,
   Progress,
-  // PullRefresh,
-  // Radio,
-  // RadioGroup,
-  // Rate,
   RatioBox,
   RemoteScript,
-  // Row,
   ScaleBox,
   Search,
-  // ShareSheet,
-  // Sidebar,
-  // SidebarItem,
-  // Skeleton,
-  // Sku,
-  // Slider,
   Statistic,
-  // Step,
-  // Stepper,
-  // Steps,
   Sticky,
-  // SubmitBar,
   Swipe,
   SwipeCell,
   SwipeItem,
-  // Switch,
-  // SwitchCell,
   Tab,
   Tabbar,
   TabbarItem,
   Tabs,
   Tag,
-  // Toast,
-  // TreeSelect,
-  // Uploader,
   ZoomBox
 }
+
+// 默认导出
+
 export default {
   install: install,
   version: version

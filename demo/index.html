@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeeUI 演示</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="../dist/meeui.css">
+</head>
+<body>
+  <div id="app">
+    <h1>MeeUI 组件库演示</h1>
+    
+    <div class="demo-section">
+      <h2>基础组件</h2>
+      
+      <div class="demo-item">
+        <h3>按钮 Button</h3>
+        <m-button type="primary">主要按钮</m-button>
+        <m-button>默认按钮</m-button>
+        <m-button type="danger">危险按钮</m-button>
+      </div>
+      
+      <div class="demo-item">
+        <h3>图标 Icon</h3>
+        <m-icon name="success" color="#07c160" size="24"></m-icon>
+        <m-icon name="warning" color="#ff976a" size="24"></m-icon>
+        <m-icon name="error" color="#ee0a24" size="24"></m-icon>
+      </div>
+      
+      <div class="demo-item">
+        <h3>单元格 Cell</h3>
+        <m-cell-group>
+          <m-cell title="单元格" value="内容"></m-cell>
+          <m-cell title="带图标" value="内容" icon="location"></m-cell>
+          <m-cell title="带箭头" is-link value="内容"></m-cell>
+        </m-cell-group>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../dist/meeui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      mounted() {
+        console.log('MeeUI 组件库已加载');
+      }
+    })
+  </script>
+</body>
+</html>
