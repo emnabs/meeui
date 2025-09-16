@@ -1,6 +1,6 @@
 {
     "name": "@emhome/meeui",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Vue UI component library",
     "main": "dist/meeui.js",
     "module": "dist/meeui.js",
