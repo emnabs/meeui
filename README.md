@@ -15,13 +15,13 @@
 ### NPM
 
 ```bash
-npm i meeui -S
+npm i @emhome/meeui -S
 ```
 
 ### Yarn
 
 ```bash
-yarn add meeui
+yarn add @emhome/meeui
 ```
 
 ### 按需引入
@@ -39,7 +39,7 @@ plugins: [
   [
     'component',
     {
-      libraryName: 'meeui',
+      libraryName: '@emhome/meeui',
       styleLibraryName: 'theme'
     }
   ]
@@ -54,8 +54,8 @@ plugins: [
 
 ```javascript
 import Vue from 'vue';
-import MeeUI from 'meeui';
-import 'meeui/theme/index'; // 支持不带扩展名的方式
+import MeeUI from '@emhome/meeui';
+import '@emhome/meeui/theme/index'; // 支持不带扩展名的方式
 
 Vue.use(MeeUI);
 ```
@@ -64,8 +64,8 @@ Vue.use(MeeUI);
 
 ```javascript
 import Vue from 'vue';
-import MeeUI from 'meeui';
-import 'meeui/theme/index.scss';
+import MeeUI from '@emhome/meeui';
+import '@emhome/meeui/theme/index.scss';
 
 Vue.use(MeeUI);
 ```
@@ -76,7 +76,7 @@ Vue.use(MeeUI);
 
 ```javascript
 import Vue from 'vue';
-import { Button, Cell } from 'meeui';
+import { Button, Cell } from '@emhome/meeui';
 
 Vue.use(Button);
 Vue.use(Cell);

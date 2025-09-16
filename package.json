@@ -1,9 +1,9 @@
 {
-    "name": "meeui",
+    "name": "@emhome/meeui",
     "version": "1.0.0",
     "description": "A Vue UI component library",
-    "main": "dist/meeui.common.js",
-    "module": "dist/meeui.esm.js",
+    "main": "dist/meeui.js",
+    "module": "dist/meeui.js",
     "unpkg": "dist/meeui.js",
     "style": "theme/index.scss",
     "files": [
@@ -13,8 +13,7 @@
     "scripts": {
         "dev": "webpack-dev-server --config build/webpack.config.dev.js",
         "build": "webpack --config build/webpack.config.prod.js",
-        "lint": "eslint src --ext .js,.vue",
-        "test": "jest"
+        "lint": "eslint src --ext .js,.vue"
     },
     "keywords": [
         "vue",
