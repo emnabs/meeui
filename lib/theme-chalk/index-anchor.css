@@ -1,0 +1,18 @@
+.mee-index-anchor {
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 16px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  background-color: transparent;
+}
+.mee-index-anchor--sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #f62d2d;
+  background-color: #fff;
+}

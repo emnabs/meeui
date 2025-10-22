@@ -1,5 +1,21 @@
+@charset "UTF-8";
 /* MeeUI Theme - SCSS source entry for Element-UI style theming */
 /* Apps can override variables before importing this entry */
+/**
+ * MeeUI Theme Source Entry
+ *
+ * This file imports all component styles from source SCSS files.
+ * Users can import this file to customize theme by overriding variables.
+ *
+ * @example
+ * // custom-theme.scss
+ * $--color-primary: #1989fa;
+ * $--color-success: #07c160;
+ * @import '~@emhome/meeui/theme/index.scss';
+ *
+ * @author MeeUI Team
+ * @date 2025-10-22
+ */
 /**
  * Entry of basic styles
  */
@@ -43,6 +59,20 @@ ol {
   list-style-position: inside;
 }
 
+/**
+ * Clearfix Utility
+ * Mixin and utility class for clearing floats
+ */
+.mee-clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Ellipsis Utility
+ * Mixins and utility classes for text overflow ellipsis
+ */
 .mee-ellipsis {
   overflow: hidden;
   white-space: nowrap;
@@ -67,12 +97,10 @@ ol {
   -webkit-box-orient: vertical;
 }
 
-.mee-clearfix::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
 [class*=mee-hairline]::after {
   position: absolute;
   box-sizing: border-box;
@@ -209,6 +237,91 @@ ol {
 }
 .mee-slide-right-leave-active {
   animation: mee-slide-right-leave 0.3s both ease-in;
+}
+
+/**
+ * Triangle Utility
+ * Mixin for creating CSS triangles
+ */
+/**
+ * Clearfix Utility
+ * Mixin and utility class for clearing floats
+ */
+.mee-clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Ellipsis Utility
+ * Mixins and utility classes for text overflow ellipsis
+ */
+.mee-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mee-ellipsis--2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+.mee-ellipsis--3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
 }
 
 /*----------------------------------------*/
@@ -643,6 +756,49 @@ ol {
 }
 .mee-alert--large .mee-alert__title {
   font-size: 1.55rem;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
 }
 
 .mee-symbol {
@@ -1372,6 +1528,49 @@ ol {
   border-bottom-right-radius: 0.42rem;
 }
 
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
 .mee-cell {
   position: relative;
   display: flex;
@@ -1648,6 +1847,37 @@ ol {
   padding: 0;
 }
 
+.mee-cell-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background-color: #fff;
+}
+.mee-cell-group:root {
+  --grid-template-columns: 4;
+  --gap: 15px;
+}
+.mee-cell-group--transparent {
+  background-color: transparent;
+}
+.mee-cell-group__title {
+  padding: 16px 16px 8px;
+  color: #969799;
+  font-size: 14px;
+  line-height: 16px;
+}
+.mee-cell-group--grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-template-columns), 1fr);
+}
+.mee-cell-group--grid .mee-cell-group__title {
+  grid-column-start: 1;
+  grid-column-end: calc(var(--grid-template-columns) + 1);
+}
+.mee-cell-group--small .mee-cell-group__title {
+  font-size: 11.2px;
+}
+
 .mee-circle {
   position: relative;
   display: inline-block;
@@ -1700,6 +1930,49 @@ ol {
 }
 .mee-clipboard__content--code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
 }
 
 .mee-clock {
@@ -1866,6 +2139,174 @@ ol {
 }
 .mee-clock--white .mee-clock__anchor--hour::after {
   background: #000;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
+.mee-color-block {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+}
+.mee-color-block::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background-color: inherit;
+}
+.mee-color-block--square {
+  height: auto !important;
+}
+.mee-color-block--square::before {
+  padding-top: 100%;
+}
+.mee-color-block--large {
+  width: 56px;
+  height: 56px;
+}
+.mee-color-block--small {
+  width: 22.4px;
+  height: 22.4px;
+}
+.mee-color-block--surround::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+  border-width: 2px;
+  border-radius: inherit;
+}
+.mee-color-block__text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  text-transform: uppercase;
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: invert(0.8) grayscale(0.8);
+  -webkit-filter: invert(0.8) grayscale(0.8);
+}
+.mee-color-block--primary {
+  background-color: #409eff;
+}
+.mee-color-block--secondary {
+  background-color: #ebedf0;
+}
+.mee-color-block--success {
+  background-color: #44be07;
+}
+.mee-color-block--info {
+  background-color: #646566;
+}
+.mee-color-block--warning {
+  background-color: #ffa800;
+}
+.mee-color-block--danger {
+  background-color: #f62d2d;
+}
+
+.mee-count-down {
+  line-height: 20px;
+}
+.mee-count-down__card-block {
+  display: inline-block;
+  width: 22px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--count-down-card-color, #000);
+  border-radius: 3px;
+}
+.mee-count-down__card-split {
+  display: inline-block;
+  margin: 0 4px;
+  font-weight: bold;
+  color: var(--count-down-card-color, #000);
+}
+
+/**
+ * Ellipsis Utility
+ * Mixins and utility classes for text overflow ellipsis
+ */
+.mee-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mee-ellipsis--2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+.mee-ellipsis--3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
 }
 
 .mee-coupon {
@@ -2044,6 +2485,82 @@ ol {
   color: #44be07;
 }
 
+.mee-descriptions {
+  --grid-gap: 0;
+  --grid-columns: 30;
+  --grid-column-end-span: 1;
+}
+.mee-descriptions__header {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mee-descriptions__body {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
+}
+.mee-descriptions__body dl {
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+.mee-descriptions__body dl dt {
+  color: #999;
+}
+.mee-descriptions__body dl dd {
+  flex: 1;
+  margin: 0;
+}
+.mee-descriptions__body dl dd > * + * {
+  margin-left: 8px;
+}
+.mee-descriptions__body dl:last-child {
+  grid-column-end: span var(--grid-column-end-span, 1);
+}
+.mee-descriptions__body--border dt,
+.mee-descriptions__body--border dd {
+  padding: 6px 10px;
+}
+.mee-descriptions--mini {
+  font-size: 10.5px;
+}
+.mee-descriptions--small {
+  font-size: 12px;
+}
+.mee-descriptions--large {
+  font-size: 16px;
+}
+.mee-descriptions + .mee-descriptions {
+  margin-top: 30px;
+}
+
+.mee-descriptions-item {
+  position: relative;
+  box-sizing: border-box;
+}
+.mee-descriptions-item--top {
+  flex-direction: column;
+}
+.mee-descriptions-item--top .mee-descriptions-item__label {
+  flex: none;
+  width: 100% !important;
+}
+.mee-descriptions-item--top .mee-descriptions-item__label::after {
+  border-right-width: 0;
+  border-bottom-width: 2px;
+}
+.mee-descriptions-item--right .mee-descriptions-item__label {
+  text-align: right;
+}
+.mee-descriptions-item--right .mee-descriptions-item__content {
+  text-align: left;
+}
+.mee-descriptions-item--middle {
+  align-items: center;
+}
+
 /*----------------------------------------*/
 /*  Card Element Styles
 /*----------------------------------------*/
@@ -2105,6 +2622,28 @@ ol {
   transform: translateX(-50%) translateY(-50%);
 }
 
+/*----------------------------------------*/
+/*  Card Element Styles
+/*----------------------------------------*/
+.mee-device {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  height: 100%;
+  border-radius: 0.42rem;
+}
+.mee-device__header {
+  height: 44px;
+}
+.mee-device__body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 .mee-field__label {
   flex: none;
   box-sizing: border-box;
@@ -2263,9 +2802,393 @@ ol {
   min-height: 60px;
 }
 
+.mee-goods-action {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  height: 54px;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #fff;
+}
+.mee-goods-action--unfit {
+  padding-bottom: 0;
+}
+
+.mee-goods-action-button {
+  flex: 1;
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  border-radius: 0;
+  padding: 0 5px;
+}
+.mee-goods-action-button + .mee-goods-action-button {
+  margin-left: 0;
+}
+.mee-goods-action-button--first {
+  margin-left: 5px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+.mee-goods-action-button--last {
+  margin-right: 5px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+.mee-goods-action-button--warning {
+  background: linear-gradient(to right, #ffd01e, #ff8917);
+}
+.mee-goods-action-button--danger {
+  background: linear-gradient(to right, #ff6034, #ee0a24);
+}
+@media (max-width: 321px) {
+  .mee-goods-action-button {
+    font-size: 13px;
+  }
+}
+
+.mee-goods-action-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 48px;
+  height: 100%;
+  color: #646566;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.mee-goods-action-icon:active {
+  background-color: #f2f3f5;
+}
+.mee-goods-action-icon__icon {
+  position: relative;
+  width: 1em;
+  margin: 0 auto 5px;
+  color: #323233;
+  font-size: 18px;
+}
+
+.mee-goods-block {
+  position: relative;
+  box-sizing: border-box;
+  color: #323233;
+  font-size: 12px;
+}
+.mee-goods-block:root {
+  --goods-thumb-scale: 100%;
+}
+.mee-goods-block__header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.mee-goods-block__thumb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+.mee-goods-block__thumb::after {
+  padding-top: var(--goods-thumb-scale, 100%);
+  content: "";
+  display: block;
+}
+.mee-goods-block__thumb > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.mee-goods-block__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.mee-goods-block__badge {
+  width: auto;
+}
+.mee-goods-block__content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mee-goods-block__title, .mee-goods-block__desc {
+  word-wrap: break-word;
+}
+.mee-goods-block__title {
+  max-height: 32px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  padding: 2px 0;
+  font-size: 14px;
+}
+.mee-goods-block__title-inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  font-size: 12px;
+}
+.mee-goods-block__desc {
+  max-height: 20px;
+  color: #646566;
+  line-height: 20px;
+}
+.mee-goods-block__bottom {
+  line-height: 20px;
+  display: flex;
+}
+.mee-goods-block--centered .mee-goods-block__content {
+  justify-content: center;
+  text-align: center;
+}
+.mee-goods-block--centered .mee-goods-block__title {
+  text-align: center;
+}
+.mee-goods-block--centered .mee-goods-block__bottom {
+  justify-content: center;
+  text-align: center;
+}
+.mee-goods-block__price {
+  display: inline-block;
+  color: #ff976a;
+  font-weight: 500;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.mee-goods-block__price-integer {
+  font-size: 16px;
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-block__price-decimal {
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-block__origin-price {
+  display: inline-block;
+  color: #969799;
+  font-size: 10px;
+  text-decoration: line-through;
+}
+.mee-goods-block__origin-price + .mee-goods-block__desc {
+  flex: 1;
+  text-align: right;
+}
+.mee-goods-block__tags {
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mee-goods-block__tags > * {
+  height: 15px;
+  margin: 2px 2px 2px 0;
+}
+.mee-goods-block__tag {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.mee-goods-block__footer {
+  flex: none;
+}
+.mee-goods-block__footer .el-button {
+  margin-left: 5px;
+}
+.mee-goods-block__add-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff0000;
+  color: #fff;
+  line-height: 1;
+  font-size: 14px;
+}
+
+.mee-goods-card {
+  position: relative;
+  box-sizing: border-box;
+  color: #323233;
+  font-size: 12px;
+}
+.mee-goods-card:not(:first-child) {
+  margin-top: 8px;
+}
+.mee-goods-card__header {
+  padding: 8px 16px;
+  display: flex;
+  background-color: #fafafa;
+}
+.mee-goods-card__thumb {
+  position: relative;
+  flex: none;
+  width: 88px;
+  min-height: 88px;
+  margin-right: 8px;
+}
+.mee-goods-card__thumb img {
+  border-radius: 8px;
+}
+.mee-goods-card__content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  /* hack for flex box ellipsis */
+  min-height: 88px;
+}
+.mee-goods-card__content--centered {
+  justify-content: center;
+}
+.mee-goods-card__title, .mee-goods-card__desc {
+  word-wrap: break-word;
+}
+.mee-goods-card__title {
+  max-height: 32px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.mee-goods-card__desc {
+  max-height: 20px;
+  color: #646566;
+  line-height: 20px;
+}
+.mee-goods-card__bottom {
+  line-height: 20px;
+}
+.mee-goods-card__bottom-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.mee-goods-card__bottom-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+.mee-goods-card__price {
+  color: #ff976a;
+  font-weight: 500;
+  font-size: 12px;
+}
+.mee-goods-card__price-integer {
+  font-size: 16px;
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-card__price-decimal {
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-card__origin-price {
+  color: #969799;
+  font-size: 10px;
+  text-decoration: line-through;
+}
+.mee-goods-card__num {
+  color: #969799;
+}
+.mee-goods-card__tag {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.mee-goods-card__footer {
+  flex: none;
+  text-align: right;
+}
+.mee-goods-card__footer .el-button {
+  margin-left: 5px;
+}
+
 .mee-grid {
   display: flex;
   flex-wrap: wrap;
+}
+
+.mee-grid-item {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.mee-grid-item--square {
+  height: 0;
+}
+.mee-grid-item__icon {
+  font-size: 28px;
+}
+.mee-grid-item__icon-wrapper {
+  position: relative;
+}
+.mee-grid-item__text {
+  color: #646566;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+.mee-grid-item__icon + .mee-grid-item__text {
+  margin-top: 8px;
+}
+.mee-grid-item__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 16px 8px;
+  background-color: #fff;
+}
+.mee-grid-item__content::after {
+  z-index: 1;
+  border-width: 0 2px 2px 0;
+}
+.mee-grid-item__content--square {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+}
+.mee-grid-item__content--center {
+  align-items: center;
+  justify-content: center;
+}
+.mee-grid-item__content--horizontal {
+  flex-direction: row;
+}
+.mee-grid-item__content--horizontal .mee-grid-item__icon + .mee-grid-item__text {
+  margin-top: 0;
+  margin-left: 8px;
+}
+.mee-grid-item__content--surround::after {
+  border-width: 2px;
+}
+.mee-grid-item__content--clickable {
+  cursor: pointer;
+}
+.mee-grid-item__content--clickable:active {
+  background-color: #f2f3f5;
 }
 
 .mee-icon {
@@ -2359,6 +3282,47 @@ ol {
 }
 .mee-image--autowidth {
   width: auto;
+}
+
+.mee-index-anchor {
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 16px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  background-color: transparent;
+}
+.mee-index-anchor--sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #f62d2d;
+  background-color: #fff;
+}
+
+.mee-index-bar__sidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+.mee-index-bar__index {
+  padding: 0 8px 0 16px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+}
+.mee-index-bar__index--active {
+  color: #f62d2d;
 }
 
 .mee-info {
@@ -2922,6 +3886,57 @@ ol {
   overflow: hidden;
 }
 
+.mee-phone-number {
+  line-height: 1;
+}
+.mee-phone-number__char {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+}
+.mee-phone-number__char + .mee-phone-number__char {
+  margin-left: 4px;
+}
+
+.mee-place-holder {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 15px;
+  overflow: hidden;
+}
+.mee-place-holder__large {
+  height: 20px;
+}
+.mee-place-holder__small {
+  height: 10px;
+}
+.mee-place-holder__min {
+  height: 10px;
+}
+.mee-place-holder--line::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  content: "";
+  display: block;
+  background-color: #f2f4f7;
+  transform: translateY(-50%);
+}
+.mee-place-holder--vertical {
+  width: 15px;
+  height: initial;
+}
+.mee-place-holder--vertical.mee-place-holder--line::after {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
 .em2-progress {
   position: relative;
   display: inline-block;
@@ -3107,6 +4122,175 @@ ol {
     background-position: 32px 0;
   }
 }
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
+.mee-ratio-box {
+  position: relative;
+  width: var(--ratiobox-width, 100%);
+}
+.mee-ratio-box::after {
+  padding-top: var(--ratiobox-ratio, 100%);
+  content: "";
+  display: block;
+}
+.mee-ratio-box > *, .mee-ratio-box__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
+.mee-scalebox {
+  position: relative;
+  width: var(--scalebox-width, 100%);
+}
+.mee-scalebox::after {
+  padding-top: var(--scalebox-ratio, 100%);
+  content: "";
+  display: block;
+}
+.mee-scalebox > *, .mee-scalebox__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
+.mee-scale-box {
+  position: relative;
+  overflow: hidden;
+}
+.mee-scale-box__inner {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .mee-search {
   display: flex;
   align-items: center;
@@ -3158,6 +4342,190 @@ ol {
 }
 .mee-search__action:active {
   background-color: #f2f3f5;
+}
+
+/**
+ * Triangle Utility
+ * Mixin for creating CSS triangles
+ */
+.mee-statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-wrap: nowrap;
+  justify-content: space-between;
+}
+.mee-statistic--reverse {
+  flex-direction: column-reverse;
+}
+.mee-statistic--center {
+  align-items: center;
+}
+.mee-statistic--vertical {
+  justify-content: center;
+}
+.mee-statistic__label {
+  color: rgba(0, 0, 0, 0.4);
+  text-wrap: nowrap;
+}
+.mee-statistic__content {
+  display: flex;
+  align-items: flex-end;
+  font-size: 2rem;
+  line-height: 1;
+  font-family: "DINT", "Dosis", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, miui, Hiragino Sans GB, Microsoft Yahei, sans-serif;
+  gap: 2px;
+}
+.mee-statistic__content small {
+  font-size: 50%;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+.mee-statistic__bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  text-wrap: nowrap;
+}
+.mee-statistic__arrow {
+  align-self: center;
+}
+.mee-statistic__arrow--up {
+  height: 0;
+  width: 0;
+  border-bottom: 6px solid #e32727;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.mee-statistic__arrow--down {
+  height: 0;
+  width: 0;
+  border-top: 6px solid #00b80c;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+/*----------------------------------------*/
+/*  Status Bar Element Styles
+/*----------------------------------------*/
+.mee-status-bar {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 12px;
+}
+.mee-status-bar > * {
+  flex: 1;
+}
+.mee-status-bar__battery {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.mee-status-bar__battery-icon {
+  margin-left: 3px;
+  width: 20px;
+  height: 10px;
+  border: 1px solid #000;
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+}
+.mee-status-bar__battery-icon::before, .mee-status-bar__battery-icon::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background: #000;
+}
+.mee-status-bar__battery-icon::before {
+  left: 1px;
+  top: 50%;
+  width: 85%;
+  height: 6px;
+  margin-top: -3px;
+  background-color: gray;
+  border-radius: 2px;
+}
+.mee-status-bar__battery-icon::after {
+  left: 100%;
+  top: 50%;
+  width: 3px;
+  height: 4px;
+  margin-top: -2px;
+}
+.mee-status-bar__time {
+  text-align: center;
+}
+.mee-status-bar__signal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mee-status-bar__signal-intensity {
+  display: flex;
+  align-items: center;
+}
+.mee-status-bar__signal-intensity > span {
+  margin-right: 2px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background-color: #000;
+}
+.mee-status-bar__signal-intensity > span:nth-child(n+4) {
+  background-color: #fff;
+}
+.mee-status-bar__wifi {
+  color: #000;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.7);
+}
+.mee-status-bar__wifi > span {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mee-status-bar__wifi > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.mee-status-bar__wifi > span:nth-child(1) {
+  width: 3px;
+  height: 3px;
+  bottom: 15%;
+  background: currentColor;
+  border: none;
+}
+.mee-status-bar__wifi > span:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  bottom: -10%;
+}
+.mee-status-bar__wifi > span:nth-child(3) {
+  width: 20px;
+  height: 20px;
+  bottom: -30%;
+}
+.mee-status-bar__wifi > span:nth-child(4) {
+  width: 28px;
+  height: 28px;
+  bottom: -50%;
 }
 
 .mee-sticky--fixed {
@@ -3223,6 +4591,74 @@ ol {
   opacity: 1;
 }
 
+.mee-swipe-cell {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+.mee-swipe-cell__wrapper {
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1);
+  transition-property: transform;
+}
+.mee-swipe-cell__left, .mee-swipe-cell__right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.mee-swipe-cell__left {
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.mee-swipe-cell__right {
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.mee-swipe-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.mee-swipe-item__inner {
+  width: calc(100% - var(--swipe-item-gutter));
+  height: 100%;
+  border-radius: var(--swipe-item-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f2f3f5;
+}
+
+.mee-swipe--scale .mee-swipe-item::after {
+  padding-top: 0;
+  padding-top: var(--scalebox-ratio);
+  content: "";
+  width: 100%;
+  display: block;
+}
+.mee-swipe--scale .mee-swipe-item__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.mee-swipe--scale .mee-swipe-item img {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* 禁止文本选中 */
+  -webkit-user-select: none;
+  /* Safari */
+  -webkit-touch-callout: none;
+  /* 禁止长按菜单 */
+  pointer-events: none;
+  /* 可选：禁止图片自身事件，仅允许 Swipe 组件处理 */
+}
+
 .mee-tab__pane, .mee-tab__pane-wrapper {
   flex-shrink: 0;
   box-sizing: border-box;
@@ -3250,6 +4686,49 @@ ol {
 }
 .mee-tabbar--unfit {
   padding-bottom: 0;
+}
+
+.mee-tabbar-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: #646566;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  gap: 4px;
+}
+.mee-tabbar-item__icon {
+  position: relative;
+  font-size: 22px;
+}
+.mee-tabbar-item__icon .mee-icon {
+  display: block;
+  font-size: inherit;
+}
+.mee-tabbar-item__icon img {
+  display: block;
+  height: 22px;
+}
+.mee-tabbar-item__icon--top {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.mee-tabbar-item__icon--top img {
+  height: 100%;
+  border-radius: 44px;
+  padding: 7.3333333333px;
+}
+.mee-tabbar-item--active {
+  color: #409eff;
+  background-color: #fff;
+}
+.mee-tabbar-item .mee-info {
+  margin-top: 4px;
 }
 
 .mee-tab {
@@ -3463,6 +4942,49 @@ ol {
 .mee-tag__close {
   margin-left: 2px;
   cursor: pointer;
+}
+
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
 }
 
 .mee-zoom-box {

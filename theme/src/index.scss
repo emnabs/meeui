@@ -21,12 +21,8 @@
 // Variables - Must be imported first to allow overriding
 @import '../../src/style/var.scss';
 
-// Base styles
+// Base styles (includes functions and mixins)
 @import '../../src/style/base.scss';
-
-// Functions and Mixins
-@import '../../src/style/functions/index';
-@import '../../src/style/mixins/index';
 
 // ==============================================
 // Component Styles (Alphabetically ordered)
@@ -49,6 +45,7 @@
 @import '../../src/descriptions/index.scss';
 @import '../../src/descriptions-item/index.scss';
 @import '../../src/device/index.scss';
+@import '../../src/draggable-componet/index.scss';
 @import '../../src/field/index.scss';
 @import '../../src/goods-action/index.scss';
 @import '../../src/goods-action-button/index.scss';
@@ -59,6 +56,8 @@
 @import '../../src/grid-item/index.scss';
 @import '../../src/icon/index.scss';
 @import '../../src/image/index.scss';
+@import '../../src/index-anchor/index.scss';
+@import '../../src/index-bar/index.scss';
 @import '../../src/info/index.scss';
 @import '../../src/lazyload/index.scss';
 @import '../../src/loading/index.scss';
@@ -70,10 +69,11 @@
 @import '../../src/place-holder/index.scss';
 @import '../../src/progress/index.scss';
 @import '../../src/ratio-box/index.scss';
-@import '../../src/remote-script/index.scss';
+@import '../../src/scalebox/index.scss';
 @import '../../src/scale-box/index.scss';
 @import '../../src/search/index.scss';
 @import '../../src/statistic/index.scss';
+@import '../../src/status-bar/index.scss';
 @import '../../src/sticky/index.scss';
 @import '../../src/swipe/index.scss';
 @import '../../src/swipe-cell/index.scss';
