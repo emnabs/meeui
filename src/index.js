@@ -59,7 +59,7 @@ import ZoomBox from './zoom-box/index.js';
 
 import './style/index.scss';
 
-const version = '2.0.9';
+const version = '2.0.10';
 
 const components = [
   Alert,
