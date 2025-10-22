@@ -1,0 +1,95 @@
+.mee-goods-card {
+  position: relative;
+  box-sizing: border-box;
+  color: #323233;
+  font-size: 12px;
+}
+.mee-goods-card:not(:first-child) {
+  margin-top: 8px;
+}
+.mee-goods-card__header {
+  padding: 8px 16px;
+  display: flex;
+  background-color: #fafafa;
+}
+.mee-goods-card__thumb {
+  position: relative;
+  flex: none;
+  width: 88px;
+  min-height: 88px;
+  margin-right: 8px;
+}
+.mee-goods-card__thumb img {
+  border-radius: 8px;
+}
+.mee-goods-card__content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  /* hack for flex box ellipsis */
+  min-height: 88px;
+}
+.mee-goods-card__content--centered {
+  justify-content: center;
+}
+.mee-goods-card__title, .mee-goods-card__desc {
+  word-wrap: break-word;
+}
+.mee-goods-card__title {
+  max-height: 32px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.mee-goods-card__desc {
+  max-height: 20px;
+  color: #646566;
+  line-height: 20px;
+}
+.mee-goods-card__bottom {
+  line-height: 20px;
+}
+.mee-goods-card__bottom-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.mee-goods-card__bottom-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+.mee-goods-card__price {
+  color: #ff976a;
+  font-weight: 500;
+  font-size: 12px;
+}
+.mee-goods-card__price-integer {
+  font-size: 16px;
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-card__price-decimal {
+  font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
+}
+.mee-goods-card__origin-price {
+  color: #969799;
+  font-size: 10px;
+  text-decoration: line-through;
+}
+.mee-goods-card__num {
+  color: #969799;
+}
+.mee-goods-card__tag {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.mee-goods-card__footer {
+  flex: none;
+  text-align: right;
+}
+.mee-goods-card__footer .el-button {
+  margin-left: 5px;
+}

@@ -1,0 +1,14 @@
+.mee-ratio-box {
+  position: relative;
+  width: var(--ratiobox-width, 100%);
+}
+.mee-ratio-box::after {
+  padding-top: var(--ratiobox-ratio, 100%);
+  content: "";
+  display: block;
+}
+.mee-ratio-box > *, .mee-ratio-box__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

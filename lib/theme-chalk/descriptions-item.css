@@ -1,0 +1,24 @@
+.mee-descriptions-item {
+  position: relative;
+  box-sizing: border-box;
+}
+.mee-descriptions-item--top {
+  flex-direction: column;
+}
+.mee-descriptions-item--top .mee-descriptions-item__label {
+  flex: none;
+  width: 100% !important;
+}
+.mee-descriptions-item--top .mee-descriptions-item__label::after {
+  border-right-width: 0;
+  border-bottom-width: 2px;
+}
+.mee-descriptions-item--right .mee-descriptions-item__label {
+  text-align: right;
+}
+.mee-descriptions-item--right .mee-descriptions-item__content {
+  text-align: left;
+}
+.mee-descriptions-item--middle {
+  align-items: center;
+}

@@ -1,0 +1,10 @@
+.mee-phone-number {
+  line-height: 1;
+}
+.mee-phone-number__char {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+}
+.mee-phone-number__char + .mee-phone-number__char {
+  margin-left: 4px;
+}

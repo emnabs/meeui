@@ -1,0 +1,165 @@
+.mee-clock {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+}
+.mee-clock__panel {
+  position: relative;
+  width: 300px;
+  border-radius: 50%;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+  border: 6px solid #ccc;
+}
+.mee-clock__panel::after {
+  padding-top: 100%;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  box-shadow: inset rgba(255, 255, 255, 0.2) 0.2em 0.2em 1em;
+}
+.mee-clock__extras {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 25%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.mee-clock__brand {
+  font-size: 14px;
+}
+.mee-clock__datetime {
+  font-size: 12px;
+}
+.mee-clock__plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.mee-clock__anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+.mee-clock__anchor::before, .mee-clock__anchor::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+}
+.mee-clock__anchor--second {
+  transform: rotate(180deg);
+}
+.mee-clock__anchor--second::after {
+  width: 2px;
+  height: 150px;
+  background: #fa9f22;
+  transform: translate(-50%, -100%) translateY(24px);
+}
+.mee-clock__anchor--minute {
+  transform: rotate(54deg);
+}
+.mee-clock__anchor--minute::before {
+  width: 4px;
+  height: 100px;
+  border-radius: 10px;
+  background: white;
+  transform: translate(-50%, -100%) translateY(10px);
+}
+.mee-clock__anchor--hour {
+  transform: rotate(304.5deg);
+}
+.mee-clock__anchor--hour::before {
+  width: 6px;
+  height: 70px;
+  border-radius: 10px;
+  background: white;
+  transform: translate(-50%, -100%) translateY(10px);
+}
+.mee-clock__pad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 296px;
+  transform: translate(-50%, -50%);
+}
+.mee-clock__pad--base {
+  background: white;
+  width: 12px;
+  height: 12px;
+}
+.mee-clock__pad--top {
+  border: 2px solid #fa9f22;
+  background: black;
+  width: 8px;
+  height: 8px;
+}
+.mee-clock__dial--minute {
+  background: white;
+  width: 1px;
+  height: 5px;
+  transform: translate(-50%, -100%) translateY(-131px);
+  opacity: 0.34;
+}
+.mee-clock__dial--hour {
+  background: white;
+  width: 2px;
+  height: 9px;
+  transform: translate(-50%, -100%) translateY(-131px);
+  opacity: 0.5;
+}
+.mee-clock__hour {
+  position: absolute;
+  font-size: 20px;
+  font-family: DIN, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+.mee-clock__hour-10 {
+  padding-left: 0.4ex;
+}
+.mee-clock__hour-11 {
+  padding-left: 0.25ex;
+}
+.mee-clock--white {
+  background: transparent;
+}
+.mee-clock--white .mee-clock__panel {
+  background: radial-gradient ellipse at center, #f6f8f9 0%, #e5ebee 65%, #cdd4d9 66%, #f5f7f9 100%;
+  border-color: #333;
+}
+.mee-clock--white .mee-clock__panel::after {
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0.2em 0.2em 1em;
+  background: linear-gradient(to top, #fff, #ddd);
+}
+.mee-clock--white .mee-clock__hour {
+  color: #333;
+}
+.mee-clock--white .mee-clock__dial--minute, .mee-clock--white .mee-clock__dial--hour {
+  background: #000;
+}
+.mee-clock--white .mee-clock__anchor--minute::before {
+  background: #000;
+}
+.mee-clock--white .mee-clock__anchor--minute::after {
+  background: #000;
+}
+.mee-clock--white .mee-clock__anchor--hour {
+  box-shadow: 1px -3px 8px 3px #aaa;
+}
+.mee-clock--white .mee-clock__anchor--hour::before {
+  background: #000;
+}
+.mee-clock--white .mee-clock__anchor--hour::after {
+  background: #000;
+}

@@ -1,0 +1,26 @@
+.mee-icon {
+  display: inline-flex;
+}
+.mee-icon__image {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+}
+.mee-icon--primary {
+  color: #409eff;
+}
+.mee-icon--secondary {
+  color: #ebedf0;
+}
+.mee-icon--success {
+  color: #44be07;
+}
+.mee-icon--info {
+  color: #646566;
+}
+.mee-icon--warning {
+  color: #ffa800;
+}
+.mee-icon--danger {
+  color: #f62d2d;
+}

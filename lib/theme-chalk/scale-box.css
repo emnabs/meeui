@@ -1,0 +1,9 @@
+.mee-scale-box {
+  position: relative;
+  overflow: hidden;
+}
+.mee-scale-box__inner {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

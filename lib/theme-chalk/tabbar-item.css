@@ -1,0 +1,42 @@
+.mee-tabbar-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: #646566;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  gap: 4px;
+}
+.mee-tabbar-item__icon {
+  position: relative;
+  font-size: 22px;
+}
+.mee-tabbar-item__icon .mee-icon {
+  display: block;
+  font-size: inherit;
+}
+.mee-tabbar-item__icon img {
+  display: block;
+  height: 22px;
+}
+.mee-tabbar-item__icon--top {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.mee-tabbar-item__icon--top img {
+  height: 100%;
+  border-radius: 44px;
+  padding: 7.3333333333px;
+}
+.mee-tabbar-item--active {
+  color: #409eff;
+  background-color: #fff;
+}
+.mee-tabbar-item .mee-info {
+  margin-top: 4px;
+}

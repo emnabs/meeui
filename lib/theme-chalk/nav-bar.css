@@ -1,0 +1,60 @@
+.mee-nav-bar {
+  position: relative;
+  z-index: 1;
+  line-height: 22px;
+  text-align: center;
+  background-color: #fff;
+  user-select: none;
+}
+.mee-nav-bar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.mee-nav-bar--safe-area-inset-top {
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
+}
+.mee-nav-bar .mee-icon {
+  color: #409eff;
+}
+.mee-nav-bar__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+.mee-nav-bar__arrow {
+  margin-right: 4px;
+  font-size: 16px;
+}
+.mee-nav-bar__title {
+  max-width: 60%;
+  margin: 0 auto;
+  color: #323233;
+  font-weight: 500;
+  font-size: 16px;
+}
+.mee-nav-bar__left, .mee-nav-bar__right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.mee-nav-bar__left:active, .mee-nav-bar__right:active {
+  opacity: 0.7;
+}
+.mee-nav-bar__left {
+  left: 0;
+}
+.mee-nav-bar__right {
+  right: 0;
+}
+.mee-nav-bar__text {
+  color: #409eff;
+}

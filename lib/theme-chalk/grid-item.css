@@ -1,0 +1,62 @@
+.mee-grid-item {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.mee-grid-item--square {
+  height: 0;
+}
+.mee-grid-item__icon {
+  font-size: 28px;
+}
+.mee-grid-item__icon-wrapper {
+  position: relative;
+}
+.mee-grid-item__text {
+  color: #646566;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+.mee-grid-item__icon + .mee-grid-item__text {
+  margin-top: 8px;
+}
+.mee-grid-item__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 16px 8px;
+  background-color: #fff;
+}
+.mee-grid-item__content::after {
+  z-index: 1;
+  border-width: 0 2px 2px 0;
+}
+.mee-grid-item__content--square {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
+}
+.mee-grid-item__content--center {
+  align-items: center;
+  justify-content: center;
+}
+.mee-grid-item__content--horizontal {
+  flex-direction: row;
+}
+.mee-grid-item__content--horizontal .mee-grid-item__icon + .mee-grid-item__text {
+  margin-top: 0;
+  margin-left: 8px;
+}
+.mee-grid-item__content--surround::after {
+  border-width: 2px;
+}
+.mee-grid-item__content--clickable {
+  cursor: pointer;
+}
+.mee-grid-item__content--clickable:active {
+  background-color: #f2f3f5;
+}

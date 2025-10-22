@@ -1,0 +1,93 @@
+.mee-currency {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+  font-weight: normal;
+}
+.mee-currency--capital {
+  flex-direction: column;
+  gap: 0.4em;
+}
+.mee-currency__number {
+  display: inline-flex;
+  align-items: baseline;
+}
+.mee-currency__captial-text {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 80%;
+  opacity: 0.8;
+}
+.mee-currency__symbol {
+  padding-right: 2px;
+}
+.mee-currency__value {
+  font-weight: normal;
+}
+.mee-currency__precision::before {
+  content: ".";
+}
+.mee-currency__text, .mee-currency__after-text {
+  margin-left: 2px;
+}
+.mee-currency__before-text {
+  margin-right: 2px;
+}
+.mee-currency:not(.mee-currency--uniform) .mee-currency__precision, .mee-currency:not(.mee-currency--uniform) .mee-currency__text, .mee-currency:not(.mee-currency--uniform) .mee-currency__after-text, .mee-currency:not(.mee-currency--uniform) .mee-currency__before-text, .mee-currency:not(.mee-currency--uniform) .mee-currency__symbol {
+  font-size: 80%;
+}
+.mee-currency--mini {
+  font-size: 10px;
+}
+.mee-currency--mini .mee-currency__value {
+  font-size: 12.5px;
+}
+.mee-currency--small {
+  font-size: 12px;
+}
+.mee-currency--small .mee-currency__value {
+  font-size: 15px;
+}
+.mee-currency--medium {
+  font-size: 14px;
+}
+.mee-currency--medium .mee-currency__value {
+  font-size: 17.5px;
+}
+.mee-currency--large {
+  font-size: 16px;
+}
+.mee-currency--large .mee-currency__value {
+  font-size: 20px;
+}
+.mee-currency:not(.mee-currency--uniform) .mee-currency__symbol {
+  transform: scale(0.9);
+  transform-origin: center bottom;
+}
+.mee-currency:not(.mee-currency--uniform) .mee-currency__symbol::before {
+  line-height: 1;
+}
+.mee-currency--primary {
+  color: #0077f3;
+}
+.mee-currency--secondary {
+  color: #bfc6cf;
+}
+.mee-currency--success {
+  color: #2a7404;
+}
+.mee-currency--info {
+  color: #3e3f3f;
+}
+.mee-currency--warning {
+  color: #b37600;
+}
+.mee-currency--danger {
+  color: #ce0909;
+}
+.mee-currency--negative {
+  color: #f62d2d;
+}
+.mee-currency--positive {
+  color: #44be07;
+}

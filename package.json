@@ -1,16 +1,18 @@
 {
     "name": "@emhome/meeui",
-    "version": "1.0.7",
+    "version": "2.0.1",
     "description": "A Vue UI component library",
-    "main": "dist/meeui.js",
-    "module": "dist/meeui.js",
-    "unpkg": "dist/meeui.min.js",
-    "jsdelivr": "dist/meeui.min.js",
-    "style": "dist/meeui.css",
+    "main": "lib/meeui.common.js",
+    "module": "lib/meeui.esm.js",
+    "unpkg": "lib/index.js",
+    "jsdelivr": "lib/index.js",
+    "style": "lib/theme-chalk/index.css",
+    "typings": "types/index.d.ts",
     "files": [
-        "dist",
+        "lib",
         "src",
         "theme",
+        "types",
         "vetur"
     ],
     "npm": {
@@ -22,7 +24,10 @@
     },
     "scripts": {
         "dev": "webpack-dev-server --config build/webpack.config.dev.js",
-        "build": "webpack --config build/webpack.config.prod.js",
+        "build:file": "node build/build-entry.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js",
+        "build:theme": "node build/build-theme.js",
+        "build:utils": "cross-env NODE_ENV=production webpack --config build/webpack.common.js --config build/webpack.component.js",
+        "build": "npm run build:file && npm run build:theme",
         "lint": "eslint src --ext .js,.vue",
         "prepublishOnly": "npm run build"
     },
@@ -42,7 +47,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:emnabs/meeui.git"
+        "url": "https://gitee.com/youmbe/meeui.git"
     },
     "keywords": [
         "vue",
@@ -78,6 +83,7 @@
         "babel-preset-stage-2": "^6.24.1",
         "babel-regenerator-runtime": "^6.5.0",
         "clean-webpack-plugin": "^3.0.0",
+        "cross-env": "^7.0.3",
         "css-loader": "^2.1.0",
         "dayjs": "^1.11.18",
         "es6-promise": "^4.0.5",
@@ -88,6 +94,7 @@
         "mini-css-extract-plugin": "^0.4.1",
         "numeral": "^2.0.6",
         "prettier": "2.1.0",
+        "progress-bar-webpack-plugin": "^2.1.0",
         "sass": "1.26.2",
         "sass-loader": "8.0.2",
         "style-loader": "^0.23.1",
@@ -106,11 +113,12 @@
         "webpack-node-externals": "^1.7.2"
     },
     "sideEffects": [
-        "src/**/style/*",
-        "src/style/**",
-        "theme/**",
+        "*.scss",
         "*.css",
-        "*.scss"
+        "lib/theme-chalk/*.css",
+        "lib/theme-chalk/base.css",
+        "src/**/style/*",
+        "src/style/**"
     ],
     "vetur": {
         "tags": "vetur/tags.json",

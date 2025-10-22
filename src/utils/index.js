@@ -165,7 +165,6 @@ export function setRgbTo16(str, fill = true) {
   return color
 }
 
-
 export function convertCurrency(money) {
   // 汉字的数字
   var cnNums = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖']

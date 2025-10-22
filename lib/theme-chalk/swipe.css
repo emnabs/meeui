@@ -1,0 +1,54 @@
+.mee-swipe {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  cursor: grab;
+  user-select: none;
+}
+.mee-swipe:root {
+  --swipe-item-radius: 0;
+  --swipe-item-gutter: 0;
+  --scalebox-ratio: 0;
+}
+.mee-swipe--vertical {
+  width: 100%;
+}
+.mee-swipe__track {
+  display: flex;
+  height: 100%;
+}
+.mee-swipe__track--vertical {
+  flex-direction: column;
+}
+.mee-swipe__indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+.mee-swipe__indicators--vertical {
+  top: 50%;
+  bottom: auto;
+  left: 12px;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+.mee-swipe__indicators--vertical .mee-swipe__indicator:not(:last-child) {
+  margin-bottom: 6px;
+}
+.mee-swipe__indicator {
+  width: 6px;
+  height: 6px;
+  background-color: #ebedf0;
+  border-radius: 100%;
+  opacity: 0.3;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+.mee-swipe__indicator:not(:last-child) {
+  margin-right: 6px;
+}
+.mee-swipe__indicator--active {
+  background-color: #409eff;
+  opacity: 1;
+}

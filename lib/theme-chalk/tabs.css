@@ -1,0 +1,119 @@
+.mee-tab {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 4px;
+  color: #646566;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.mee-tab--active {
+  color: #323233;
+  font-weight: 500;
+}
+.mee-tab--disabled {
+  color: #c8c9cc;
+  cursor: not-allowed;
+}
+.mee-tab__text--ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.mee-tab__text-wrapper {
+  position: relative;
+}
+
+.mee-tabs {
+  position: relative;
+}
+.mee-tabs__wrap {
+  overflow: hidden;
+}
+.mee-tabs__wrap--page-top {
+  position: fixed;
+}
+.mee-tabs__wrap--content-bottom {
+  top: auto;
+  bottom: 0;
+}
+.mee-tabs__wrap--scrollable .mee-tab {
+  flex: 1 0 auto;
+  padding: 0 12px;
+}
+.mee-tabs__wrap--scrollable .mee-tabs__nav {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.mee-tabs__wrap--scrollable .mee-tabs__nav::-webkit-scrollbar {
+  display: none;
+}
+.mee-tabs__nav {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+  user-select: none;
+}
+.mee-tabs__nav--line {
+  box-sizing: content-box;
+  height: 100%;
+  padding-bottom: 15px;
+  /* 15px padding to hide scrollbar in mobile safari */
+}
+.mee-tabs__nav--complete {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.mee-tabs__nav--card {
+  box-sizing: border-box;
+  height: 30px;
+  margin: 0 16px;
+  border: 2px solid #f62d2d;
+  border-radius: 2px;
+}
+.mee-tabs__nav--card .mee-tab {
+  color: #f62d2d;
+  border-right: 2px solid #f62d2d;
+}
+.mee-tabs__nav--card .mee-tab:last-child {
+  border-right: none;
+}
+.mee-tabs__nav--card .mee-tab.mee-tab--active {
+  color: #fff;
+  background-color: #f62d2d;
+}
+.mee-tabs__nav--card .mee-tab--disabled {
+  color: #c8c9cc;
+}
+.mee-tabs__line {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  z-index: 1;
+  width: 40px;
+  height: 3px;
+  background-color: #f62d2d;
+  border-radius: 3px;
+}
+.mee-tabs__track {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: left;
+}
+.mee-tabs__content--animated {
+  overflow: hidden;
+}
+.mee-tabs--line .mee-tabs__wrap {
+  height: 44px;
+}
+.mee-tabs--card > .mee-tabs__wrap {
+  height: 30px;
+}

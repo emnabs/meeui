@@ -1,0 +1,17 @@
+.mee-clipboard {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+}
+.mee-clipboard__icon {
+  cursor: pointer;
+  transform: scale(0.75);
+  opacity: 0.5;
+}
+.mee-clipboard__icon:hover {
+  opacity: 1;
+}
+.mee-clipboard__content--code {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}

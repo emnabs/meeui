@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.mee-swipe-item {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.mee-swipe-item__inner {
+  width: calc(100% - var(--swipe-item-gutter));
+  height: 100%;
+  border-radius: var(--swipe-item-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #f2f3f5;
+}
+
+.mee-swipe--scale .mee-swipe-item::after {
+  padding-top: 0;
+  padding-top: var(--scalebox-ratio);
+  content: "";
+  width: 100%;
+  display: block;
+}
+.mee-swipe--scale .mee-swipe-item__inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.mee-swipe--scale .mee-swipe-item img {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* 禁止文本选中 */
+  -webkit-user-select: none;
+  /* Safari */
+  -webkit-touch-callout: none;
+  /* 禁止长按菜单 */
+  pointer-events: none;
+  /* 可选：禁止图片自身事件，仅允许 Swipe 组件处理 */
+}

@@ -1,0 +1,60 @@
+/*----------------------------------------*/
+/*  Card Element Styles
+/*----------------------------------------*/
+.mee-device {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  height: 100%;
+  border-radius: 0.42rem;
+  overflow: hidden;
+}
+.mee-device__header {
+  height: 44px;
+}
+.mee-device__body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.mee-device__body .mee-sticky {
+  display: none;
+}
+.mee-device__body .mee-sticky--fixed {
+  display: block;
+  top: 42px;
+  left: 13px;
+  width: 325px;
+}
+.mee-device__mp-button {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 1;
+  height: 28px;
+  width: 76px;
+  background: #fff;
+  color: black;
+  border-radius: 34px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mee-device__mp-button .mee-icon {
+  font-size: 18px;
+}
+.mee-device__mp-button::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: "";
+  width: 1px;
+  background: #ccc;
+  height: 70%;
+  transform: translateX(-50%) translateY(-50%);
+}

@@ -1,0 +1,33 @@
+.mee-goods-action-button {
+  flex: 1;
+  height: 36px;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  border-radius: 0;
+  padding: 0 5px;
+}
+.mee-goods-action-button + .mee-goods-action-button {
+  margin-left: 0;
+}
+.mee-goods-action-button--first {
+  margin-left: 5px;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+.mee-goods-action-button--last {
+  margin-right: 5px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+.mee-goods-action-button--warning {
+  background: linear-gradient(to right, #ffd01e, #ff8917);
+}
+.mee-goods-action-button--danger {
+  background: linear-gradient(to right, #ff6034, #ee0a24);
+}
+@media (max-width: 321px) {
+  .mee-goods-action-button {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,35 @@
+.mee-circle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.mee-circle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mee-circle__layer {
+  stroke: #fff;
+}
+.mee-circle__hover {
+  fill: none;
+  stroke: #409eff;
+  stroke-linecap: round;
+}
+.mee-circle__text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 4px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  transform: translateY(-50%);
+}

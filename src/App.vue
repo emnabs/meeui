@@ -2,10 +2,10 @@
   <div class="app-container">
     <h1 class="app-title">MeeUI 组件库</h1>
     <p class="app-description">一个基于Vue的UI组件库</p>
-    
+
     <div class="components-section">
       <h2>基础组件展示</h2>
-      
+
       <!-- 按钮组件示例 -->
       <div class="component-demo">
         <h3>Button 按钮</h3>
@@ -13,15 +13,15 @@
         <m-button>默认按钮</m-button>
         <m-button type="danger">危险按钮</m-button>
       </div>
-      
+
       <!-- 图标组件示例 -->
       <div class="component-demo">
         <h3>Icon 图标</h3>
-        <m-icon name="success" color="#07c160" size="24"></m-icon>
-        <m-icon name="warning" color="#ff976a" size="24"></m-icon>
-        <m-icon name="error" color="#ee0a24" size="24"></m-icon>
+        <m-icon name="success" color="#07c160" size="24" />
+        <m-icon name="warning" color="#ff976a" size="24" />
+        <m-icon name="error" color="#ee0a24" size="24" />
       </div>
-      
+
       <!-- 其他组件示例... -->
     </div>
   </div>
@@ -30,7 +30,7 @@
 <script>
 export default {
   name: 'App'
-};
+}
 </script>
 
 <style scoped>

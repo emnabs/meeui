@@ -1,0 +1,23 @@
+.mee-goods-action-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 48px;
+  height: 100%;
+  color: #646566;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+.mee-goods-action-icon:active {
+  background-color: #f2f3f5;
+}
+.mee-goods-action-icon__icon {
+  position: relative;
+  width: 1em;
+  margin: 0 auto 5px;
+  color: #323233;
+  font-size: 18px;
+}

@@ -3,7 +3,6 @@
 import { createNamespace, isDef, convertCurrency } from '../utils'
 import { THEME_COLORS } from '../utils/theme'
 
-
 // import { inherit } from '../utils/functional' // Types
 // style moved to centralized theme entry
 

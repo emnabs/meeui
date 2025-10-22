@@ -1,0 +1,9 @@
+.mee-tab__pane, .mee-tab__pane-wrapper {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.mee-tab__pane-wrapper--inactive {
+  height: 0;
+  overflow: visible;
+}

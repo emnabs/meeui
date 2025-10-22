@@ -1,0 +1,43 @@
+.mee-zoom-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+}
+.mee-zoom-box:root {
+  --scalebox-ratio: 100%;
+}
+.mee-zoom-box::before {
+  padding-top: var(--scalebox-ratio, 100%);
+  content: "";
+  display: block;
+}
+.mee-zoom-box__inner {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  left: 0;
+  top: 0;
+}
+.mee-zoom-box__body {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.mee-zoom-box--clickable {
+  cursor: pointer;
+}
+.mee-zoom-box--clickable:active {
+  background-color: #f2f3f5;
+}
+.mee-zoom-box--center .mee-zoom-box__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mee-zoom-box--border .mee-zoom-box__body {
+  border: 1px solid #ebedf0;
+}

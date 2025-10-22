@@ -1,0 +1,81 @@
+.mee-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 2px;
+}
+.mee-tag--default {
+  background-color: #969799;
+}
+.mee-tag--default.mee-tag--plain {
+  color: #969799;
+}
+.mee-tag--danger {
+  background-color: #f62d2d;
+}
+.mee-tag--danger.mee-tag--plain {
+  color: #f62d2d;
+}
+.mee-tag--primary {
+  background-color: #409eff;
+}
+.mee-tag--primary.mee-tag--plain {
+  color: #409eff;
+}
+.mee-tag--success {
+  background-color: #44be07;
+}
+.mee-tag--success.mee-tag--plain {
+  color: #44be07;
+}
+.mee-tag--warning {
+  background-color: #ffa800;
+}
+.mee-tag--warning.mee-tag--plain {
+  color: #ffa800;
+}
+.mee-tag--plain {
+  background-color: #fff;
+}
+.mee-tag--plain::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid currentColor;
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+.mee-tag--small {
+  transform: scale(0.8);
+  transform-origin: left center;
+}
+.mee-tag--medium {
+  padding: 2px 6px;
+}
+.mee-tag--large {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.mee-tag--mark {
+  border-radius: 0 999px 999px 0;
+}
+.mee-tag--mark::after {
+  display: block;
+  width: 2px;
+  content: "";
+}
+.mee-tag--round {
+  border-radius: 999px;
+}
+.mee-tag__close {
+  margin-left: 2px;
+  cursor: pointer;
+}
