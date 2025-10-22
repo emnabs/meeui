@@ -48,10 +48,10 @@
   background-color: #fff;
 }
 .mee-zoom-box:root {
-  --scalebox-ratio: 100%;
+  --zoom-box-ratio: 100%;
 }
 .mee-zoom-box::before {
-  padding-top: var(--scalebox-ratio, 100%);
+  padding-top: var(--zoom-box-ratio, 100%);
   content: "";
   display: block;
 }
