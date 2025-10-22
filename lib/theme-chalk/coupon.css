@@ -1,3 +1,31 @@
+/**
+ * Ellipsis Utility
+ * Mixins and utility classes for text overflow ellipsis
+ */
+.mee-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mee-ellipsis--2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+.mee-ellipsis--3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
 .mee-coupon {
   overflow: hidden;
   background-color: #fff;

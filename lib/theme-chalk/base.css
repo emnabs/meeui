@@ -41,6 +41,20 @@ ol {
   list-style-position: inside;
 }
 
+/**
+ * Clearfix Utility
+ * Mixin and utility class for clearing floats
+ */
+.mee-clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Ellipsis Utility
+ * Mixins and utility classes for text overflow ellipsis
+ */
 .mee-ellipsis {
   overflow: hidden;
   white-space: nowrap;
@@ -65,12 +79,10 @@ ol {
   -webkit-box-orient: vertical;
 }
 
-.mee-clearfix::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
 [class*=mee-hairline]::after {
   position: absolute;
   box-sizing: border-box;

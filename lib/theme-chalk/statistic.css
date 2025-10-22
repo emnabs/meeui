@@ -1,3 +1,7 @@
+/**
+ * Triangle Utility
+ * Mixin for creating CSS triangles
+ */
 .mee-statistic {
   display: flex;
   flex-direction: column;

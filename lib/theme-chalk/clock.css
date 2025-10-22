@@ -1,3 +1,46 @@
+/**
+ * Hairline Utility
+ * Mixins and utility classes for 0.5px borders on retina displays
+ */
+[class*=mee-hairline]::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid #ebedf0;
+  transform: scale(0.5);
+}
+
+.mee-hairline, .mee-hairline--top, .mee-hairline--left, .mee-hairline--right, .mee-hairline--bottom, .mee-hairline--surround, .mee-hairline--top-bottom {
+  position: relative;
+}
+.mee-hairline--top::after {
+  border-top-width: 2px;
+}
+.mee-hairline--left::after {
+  border-left-width: 2px;
+}
+.mee-hairline--right::after {
+  border-right-width: 2px;
+}
+.mee-hairline--bottom::after {
+  border-bottom-width: 2px;
+}
+.mee-hairline--top-bottom::after {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+.mee-hairline-unset--top-bottom::after {
+  border-width: 2px 0;
+}
+.mee-hairline--surround::after {
+  border-width: 2px;
+}
+
 .mee-clock {
   display: inline-flex;
   flex-direction: column;
