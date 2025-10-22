@@ -1,26 +1,62 @@
-// MeeUI theme source entry (Element-UI style)
-// Order: variables -> base -> functions/mixins -> component styles
+/**
+ * MeeUI Theme Source Entry
+ *
+ * This file imports all component styles from source SCSS files.
+ * Users can import this file to customize theme by overriding variables.
+ *
+ * @example
+ * // custom-theme.scss
+ * $--color-primary: #1989fa;
+ * $--color-success: #07c160;
+ * @import '~@emhome/meeui/theme/index.scss';
+ *
+ * @author MeeUI Team
+ * @date 2025-10-22
+ */
 
+// ==============================================
+// Base Styles (Variables, Reset, Functions, Mixins)
+// ==============================================
+
+// Variables - Must be imported first to allow overriding
 @import '../../src/style/var.scss';
+
+// Base styles
 @import '../../src/style/base.scss';
+
+// Functions and Mixins
 @import '../../src/style/functions/index';
 @import '../../src/style/mixins/index';
 
-// Component styles
+// ==============================================
+// Component Styles (Alphabetically ordered)
+// ==============================================
+
 @import '../../src/alert/index.scss';
 @import '../../src/avatar/index.scss';
 @import '../../src/button/index.scss';
 @import '../../src/byte-size/index.scss';
 @import '../../src/card/index.scss';
 @import '../../src/cell/index.scss';
+@import '../../src/cell-group/index.scss';
 @import '../../src/circle/index.scss';
 @import '../../src/clipboard/index.scss';
 @import '../../src/clock/index.scss';
+@import '../../src/color-block/index.scss';
+@import '../../src/count-down/index.scss';
 @import '../../src/coupon/index.scss';
 @import '../../src/currency/index.scss';
+@import '../../src/descriptions/index.scss';
+@import '../../src/descriptions-item/index.scss';
 @import '../../src/device/index.scss';
 @import '../../src/field/index.scss';
+@import '../../src/goods-action/index.scss';
+@import '../../src/goods-action-button/index.scss';
+@import '../../src/goods-action-icon/index.scss';
+@import '../../src/goods-block/index.scss';
+@import '../../src/goods-card/index.scss';
 @import '../../src/grid/index.scss';
+@import '../../src/grid-item/index.scss';
 @import '../../src/icon/index.scss';
 @import '../../src/image/index.scss';
 @import '../../src/info/index.scss';
@@ -30,12 +66,21 @@
 @import '../../src/notice-bar/index.scss';
 @import '../../src/overlay/index.scss';
 @import '../../src/phone/index.scss';
+@import '../../src/phone-number/index.scss';
+@import '../../src/place-holder/index.scss';
 @import '../../src/progress/index.scss';
+@import '../../src/ratio-box/index.scss';
+@import '../../src/remote-script/index.scss';
+@import '../../src/scale-box/index.scss';
 @import '../../src/search/index.scss';
+@import '../../src/statistic/index.scss';
 @import '../../src/sticky/index.scss';
 @import '../../src/swipe/index.scss';
+@import '../../src/swipe-cell/index.scss';
+@import '../../src/swipe-item/index.scss';
 @import '../../src/tab/index.scss';
 @import '../../src/tabbar/index.scss';
+@import '../../src/tabbar-item/index.scss';
 @import '../../src/tabs/index.scss';
 @import '../../src/tag/index.scss';
 @import '../../src/zoom-box/index.scss';

@@ -29,6 +29,7 @@
         "build:utils": "cross-env NODE_ENV=production webpack --config build/webpack.common.js --config build/webpack.component.js",
         "build": "npm run build:file && npm run build:theme",
         "lint": "eslint src --ext .js,.vue",
+        "release": "npm run test && npm version patch && npm run build && npm publish",
         "prepublishOnly": "npm run build"
     },
     "husky": {

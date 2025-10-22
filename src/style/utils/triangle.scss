@@ -1,7 +1,13 @@
-//
-// Triangle
-//
+/**
+ * Triangle Utility
+ * Mixin for creating CSS triangles
+ */
 
+// Triangle mixin
+// @param {number} $width - Width of the triangle
+// @param {number} $height - Height of the triangle
+// @param {color} $color - Color of the triangle
+// @param {string} $direction - Direction: up, down, left, right
 @mixin triangle($width, $height, $color, $direction) {
   $width: $width/2;
   $color-border-style: $height solid $color;

@@ -2,12 +2,23 @@
  * Entry of basic styles
  */
 
-@import 'functions';
-@import 'mixins';
+// Variables
 @import './var';
+
+// Bootstrap Functions & Mixins
+@import './functions/get';
+@import './functions/color';
+@import './bootstrap/mixins/border-radius';
+@import './bootstrap/mixins/gradients';
+
+// Normalize & Base Styles
 @import './normalize';
-@import './ellipsis';
-@import './clearfix';
-@import './hairline';
+
+// Utilities
+@import './utils/clearfix';
+@import './utils/ellipsis';
+@import './utils/hairline';
+
+// Animations & Custom Styles
 @import './animation';
 @import './umbe';

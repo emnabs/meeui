@@ -1,0 +1,18 @@
+/**
+ * Clearfix Utility
+ * Mixin and utility class for clearing floats
+ */
+
+// Clearfix mixin
+@mixin clearfix() {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+// Clearfix utility class
+.mee-clearfix {
+  @include clearfix();
+}
