@@ -16,7 +16,6 @@
   "descriptions": "./src/descriptions/index.js",
   "descriptions-item": "./src/descriptions-item/index.js",
   "device": "./src/device/index.js",
-  "draggable-componet": "./src/draggable-componet/index.js",
   "field": "./src/field/index.js",
   "goods-action": "./src/goods-action/index.js",
   "goods-action-button": "./src/goods-action-button/index.js",
