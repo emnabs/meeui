@@ -40,7 +40,7 @@ try {
 
 // Configuration
 const OUTPUT_PATH = path.join(__dirname, '../src/index.js')
-const IMPORT_TEMPLATE = `import %name% from '%path%';`
+const IMPORT_TEMPLATE = `import %name% from '%path%'`
 const INSTALL_COMPONENT_TEMPLATE = `  %name%`
 const EXPORT_COMPONENT_TEMPLATE = `  %name%`
 
@@ -147,13 +147,13 @@ try {
 
 // Generate file content
 const fileContent = `${importStatements}
-import './style/index.scss';
+import './style/index.scss'
 
-const version = '${version}';
+const version = '${version}'
 
 const components = [
 ${installComponents}
-];
+]
 
 const install = function(Vue) {
   components.forEach(component => {
@@ -162,8 +162,8 @@ const install = function(Vue) {
     } else if (component && component.name) {
       Vue.component(component.name, component);
     }
-  });
-};
+  })
+}
 
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
@@ -174,12 +174,12 @@ export {
   install,
   version,
 ${exportComponents}
-};
+}
 
 export default {
   version,
   install
-};
+}
 `
 
 // Write file
