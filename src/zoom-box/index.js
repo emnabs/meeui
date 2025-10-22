@@ -57,7 +57,7 @@ function ZoomBox(h, props, slots, ctx) {
     const ratio = Math.abs(props.ratio)
     if (ratio !== 0 && ratio !== 1) {
       styles.push({
-        '--scalebox-ratio': `${100 / ratio}%`
+        '--zoom-box-ratio': `${100 / ratio}%`
       })
     }
   }

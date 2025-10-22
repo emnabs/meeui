@@ -77,16 +77,6 @@ export default createComponent({
     }
   },
   mounted: function mounted() {
-    // this.updateSize()
-    // // 添加内容变化监听
-    // this.observer = new MutationObserver(this.updateSize)
-    // this.observer.observe(this.$refs.content, {
-    //   childList: true,
-    //   subtree: true,
-    //   attributes: true
-    // })
-    // window.addEventListener('resize', this.updateSize)
-
     // 1. 使用 ResizeObserver 替代 MutationObserver
     this.resizeObserver = new ResizeObserver(this.updateSize)
     this.resizeObserver.observe(this.$refs.content)

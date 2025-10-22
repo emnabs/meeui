@@ -28,6 +28,9 @@ import Grid from './grid/index.js'
 import GridItem from './grid-item/index.js'
 import Icon from './icon/index.js'
 import Image from './image/index.js'
+import IndexAnchor from './index-anchor/index.js'
+import IndexBar from './index-bar/index.js'
+import Info from './info/index.js'
 import Lazyload from './lazyload/index.js'
 import NavBar from './nav-bar/index.js'
 import NoticeBar from './notice-bar/index.js'
@@ -41,6 +44,7 @@ import RemoteScript from './remote-script/index.js'
 import ScaleBox from './scale-box/index.js'
 import Search from './search/index.js'
 import Statistic from './statistic/index.js'
+import StatusBar from './status-bar/index.js'
 import Sticky from './sticky/index.js'
 import Swipe from './swipe/index.js'
 import SwipeCell from './swipe-cell/index.js'
@@ -59,8 +63,8 @@ const version = '2.0.6'
 const components = [
   Alert,
   Avatar,
-  ByteSize,
   Button,
+  ByteSize,
   Card,
   Cell,
   CellGroup,
@@ -84,6 +88,9 @@ const components = [
   GridItem,
   Icon,
   Image,
+  IndexAnchor,
+  IndexBar,
+  Info,
   Lazyload,
   NavBar,
   NoticeBar,
@@ -97,6 +104,7 @@ const components = [
   ScaleBox,
   Search,
   Statistic,
+  StatusBar,
   Sticky,
   Swipe,
   SwipeCell,
@@ -129,8 +137,8 @@ export {
   version,
   Alert,
   Avatar,
-  ByteSize,
   Button,
+  ByteSize,
   Card,
   Cell,
   CellGroup,
@@ -154,6 +162,9 @@ export {
   GridItem,
   Icon,
   Image,
+  IndexAnchor,
+  IndexBar,
+  Info,
   Lazyload,
   NavBar,
   NoticeBar,
@@ -167,6 +178,7 @@ export {
   ScaleBox,
   Search,
   Statistic,
+  StatusBar,
   Sticky,
   Swipe,
   SwipeCell,

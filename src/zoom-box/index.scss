@@ -7,10 +7,10 @@
   width: 100%;
   background-color: $--cell-background-color;
   &:root {
-    --scalebox-ratio: 100%;
+    --zoom-box-ratio: 100%;
   }
   &::before {
-    padding-top: var(--scalebox-ratio, 100%);
+    padding-top: var(--zoom-box-ratio, 100%);
     content: '';
     display: block;
   }

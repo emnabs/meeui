@@ -41,7 +41,6 @@
   "progress": "./src/progress/index.js",
   "ratio-box": "./src/ratio-box/index.js",
   "remote-script": "./src/remote-script/index.js",
-  "scalebox": "./src/scalebox/index.js",
   "scale-box": "./src/scale-box/index.js",
   "search": "./src/search/index.js",
   "statistic": "./src/statistic/index.js",
