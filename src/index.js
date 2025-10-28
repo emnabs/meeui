@@ -59,7 +59,7 @@ import ZoomBox from './zoom-box/index.js'
 
 import './style/index.scss'
 
-const version = '2.0.10'
+const version = '2.0.11'
 
 const components = [
   Alert,
@@ -119,19 +119,19 @@ const components = [
   ZoomBox
 ]
 
-const install = function (Vue) {
+const install = function(Vue) {
   components.forEach(component => {
     if (component && component.install) {
-      Vue.use(component)
+      Vue.use(component);
     } else if (component && component.name) {
-      Vue.component(component.name, component)
+      Vue.component(component.name, component);
     }
   })
 }
 
 /* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue)
+  install(window.Vue);
 }
 
 export {
