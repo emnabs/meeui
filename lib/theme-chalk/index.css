@@ -2143,6 +2143,9 @@ ol {
   border-width: 2px;
   border-radius: inherit;
 }
+.mee-color-block--dot {
+  width: 5px;
+}
 .mee-color-block__text {
   position: absolute;
   width: 100%;
