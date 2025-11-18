@@ -53,5 +53,6 @@
   "tabbar-item": "./src/tabbar-item/index.js",
   "tabs": "./src/tabs/index.js",
   "tag": "./src/tag/index.js",
-  "zoom-box": "./src/zoom-box/index.js"
+  "zoom-box": "./src/zoom-box/index.js",
+  "utils": "./src/utils/index.js"
 }

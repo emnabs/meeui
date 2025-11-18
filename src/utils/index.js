@@ -1,5 +1,6 @@
 import Vue from 'vue'
 export { createNamespace } from './create'
+export { createBEM } from './create/bem'
 export { addUnit } from './format/unit'
 export var inBrowser = typeof window !== 'undefined'
 export var isServer = Vue.prototype.$isServer
